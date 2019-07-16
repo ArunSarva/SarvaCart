@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import { Button, Image } from 'react-bootstrap';
-import browserHistory from "../util/browserHistory"
+// import browserHistory from "../util/browserHistory"
 import sarva from '../Image/sarva-logo.png'
 import './CSS/Navbar.css';
 
