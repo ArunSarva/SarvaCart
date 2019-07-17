@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import './CSS/Signup.css'
+import { Form } from 'react-bootstrap';
+
 import { Container, Button, Alert, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 class Signup extends Component {
     state = {
 		visible: true,
-		modalIsOpen: false
+		modalIsOpen: true
 	  }
 	toggleModal() {
 		this.setState({
@@ -13,47 +16,34 @@ class Signup extends Component {
 	  }
     render() {
         return (
-            // <div>
-            //     <label className="label1">Register</label>
-            //     <form >
-            //         <label>
-            //         First Name<br></br>
-            //         <input type="text" name="Fname" className="inputfiled" onChange={this.handleChange} /><br></br>
-            //         Last Name<br></br>
-            //         <input type="text" name="Sname" className="inputfiled" onChange={this.handleChange} /><br></br>
-            //         <br></br>
-            //         User Name<br></br>
-            //         <input type="text" name="Uname"  className="inputfiled" onChange={this.handleChange} /><br></br>
-            //         Password<br></br>
-            //         <input type="text" name="Password" className="inputfiled" onChange={this.handleChange} /><br></br>
-            //         </label>      
-            //     </form>
-            //     <button  className="Register" > Register </button>
-            //     <button  className="Cancel" > Cancel </button>
-            // </div>
 						<Container>
-						<Button color="primary" onClick={this.toggleModal.bind(this)}>Open Modal</Button>
+						<Button color="primary Sign_up" onClick={this.toggleModal.bind(this)}>Signup</Button>
 						<Modal isOpen={this.state.modalIsOpen}>
 						<ModalHeader toggle={this.toggleModal.bind(this)}>Register</ModalHeader>
 						<ModalBody>
-						<form >
-                    <label>
-                    First Name
-										<input type="text" name="Fname" className="inputfiled" onChange={this.handleChange} />
-                    Last Name<br></br>
-                    <input type="text" name="Sname" className="inputfiled" onChange={this.handleChange} />
-                    <br></br>
-                    Email<br></br>
-                    <input type="text" name="Uname"  className="inputfiled" onChange={this.handleChange} />
-                    Password<br></br>
-                    <input type="text" name="Password" className="inputfiled" onChange={this.handleChange} />
-                    </label>      
-                </form>
+						<Form>
+							<Form.Group controlId="formBasicEmail">
+								<Form.Label>Name</Form.Label>
+								<Form.Control type="text" placeholder="Name" />
+								<Form.Label>Email address</Form.Label>
+								<Form.Control type="email" placeholder="Enter email" />
+								<Form.Text className="text-muted">
+								We'll never share your email with anyone else.
+								</Form.Text>
+							</Form.Group>
+
+							<Form.Group controlId="formBasicPassword">
+								<Form.Label>Password</Form.Label>
+								<Form.Control type="password" placeholder="Password" />
+							</Form.Group>
+							<Button color="primary Signup_btn">Signup</Button>
+							<Button color="secondary" onClick={this.toggleModal.bind(this)}>Cancel</Button>							
+						</Form>
 						</ModalBody>
-						<ModalFooter>
+						{/* <ModalFooter>
 						<button  className="Register" > Register </button>
                 <button  className="Cancel" > Cancel </button>
-						</ModalFooter>
+						</ModalFooter> */}
 						</Modal>
 					</Container>
         );

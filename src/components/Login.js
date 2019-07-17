@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import { connect} from "react-redux";
 import './CSS/Login.css';
+import { Form } from 'react-bootstrap';
+
 import { Container, Button, Alert, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
@@ -17,20 +19,31 @@ class Login extends Component {
 	render() {
 		return (
 			<Container>
-				<Button color="primary" onClick={this.toggleModal.bind(this)}>Open Modal</Button>
+				{/* <Button color="primary" onClick={this.toggleModal.bind(this)}>Login</Button> */}
 				<Modal isOpen={this.state.modalIsOpen}>
 				<ModalHeader toggle={this.toggleModal.bind(this)}>Login</ModalHeader>
 				<ModalBody>
-				<form className ="login_form">
-					User Name<br></br>
-					<input type="text" className="inputfiled" onChange={this.handleChange} /><br></br>
-					Password<br></br>
-					<input type="email" name="Password" className="inputfiled" onChange={this.handleChange} /><br></br> 
-					<br></br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-				</form>
+				<Form>
+					<Form.Group controlId="formBasicEmail">
+						<Form.Label>Email address</Form.Label>
+						<Form.Control type="email" placeholder="Enter email" />
+						<Form.Text className="text-muted">
+						We'll never share your email with anyone else.
+						</Form.Text>
+					</Form.Group>
+
+					<Form.Group controlId="formBasicPassword">
+						<Form.Label>Password</Form.Label>
+						<Form.Control type="password" placeholder="Password" />
+					</Form.Group>
+					<Form.Group controlId="formBasicChecbox">
+						<Form.Check type="checkbox" label="Check me out" />
+					</Form.Group>
+					
+				</Form>
 				</ModalBody>
 				<ModalFooter>
-					<Button color="primary">Sign Up</Button>
+					<Button color="primary">Login</Button>
 					<Button color="secondary" onClick={this.toggleModal.bind(this)}>Cancel</Button>
 				</ModalFooter>
 				</Modal>

@@ -1,5 +1,16 @@
+.Nav_bar{
+    color: aliceblue;
+}
 .logo
 {
     height: 50px;
     width: 100px;
+}
+.Nav_signup{
+    padding-left: 250px;
+    padding-right: 100px;
+}
+.Cart{
+    height: 35px;
+    width: 35px;
 }

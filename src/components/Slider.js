@@ -1,29 +1,31 @@
 import React from 'react';
 import { Zoom } from 'react-slideshow-image';
-const images = [
-  'Image/slide_3.jpg',
-  'Image/slide_4.jpg',
-  'Image/slide_5.jpg',
-  'Image/slide_6.jpg',
-  'Image/slide_7.jpg'
-];
- 
-const zoomOutProperties = {
-  duration: 5000,
-  transitionDuration: 500,
-  infinite: true,
-  indicators: true,
-  scale: 0.4,
-  arrows: true
-}
+import { Carousel } from 'react-bootstrap';
+import './CSS/slider.css'
  
 const Slideshow = () => {
     return (
-      <Zoom {...zoomOutProperties}>
-        {
-          images.map((each, index) => <img key={index} style={{width: "100%"}} src={each} />)
-        }
-      </Zoom>
+      <Carousel className="Slider">
+        <Carousel.Item>
+        <img  src={require('../Image/slide1.jpg')} alt="Card image"  />
+          <Carousel.Caption>
+            <h3>First slide label</h3>            
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+        <img  src={require('../Image/slide2.jpg')} alt="Card image"  />
+          <Carousel.Caption>
+            <h3>Second slide label</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+        <img  src={require('../Image/slide3.jpg')} alt="Card image"  />
+
+          <Carousel.Caption>
+            <h3>Third slide label</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     )
 }
 export default Slideshow;
