@@ -12,48 +12,115 @@ class Product_slider extends Component {
 							<Row>
 								<Col className="Products">
 								{/* <div > */}
-								<img  src={require('../Image/redmi.jpeg')} alt="Card image"  />
+								<img className="Products" src={require('../Image/redmi.jpeg')} alt="Card image"  />
+								<p>
+									<h4>Price:15,000Rs</h4>
+									Mobile
+								</p>
 								{/* </div> */}
 								
 								</Col>
 								<Col className="Products">
 								{/* <div > */}
-								<img  src={require('../Image/redmi.jpeg')} alt="Card image"  />
+								<img className="Products" src={require('../Image/m2.jpeg')} alt="Card image"  />
+								<p>
+									<h4>Price:14,000Rs</h4>
+									Mobile
+								</p>
 								{/* </div> */}
 								
 								</Col>
 								<Col className="Products">
 								{/* <div > */}
-								<img  src={require('../Image/redmi.jpeg')} alt="Card image"  />
+								<img className="Products" src={require('../Image/shoe.jpeg')} alt="Card image"  />
+								<p>
+									<h4>Price:1,000Rs</h4>
+									Shoe
+								</p>
 								{/* </div> */}
 								
 								</Col>
 								<Col className="Products">
 								{/* <div > */}
-								<img  src={require('../Image/redmi.jpeg')} alt="Card image"  />
+								<img className="Products" src={require('../Image/watch.jpeg')} alt="Card image"  />
 								{/* </div> */}
+								<p>
+									<h4>Price:1,400Rs</h4>
+									Watch
+								</p>
 								
 								</Col>
 								
 							</Row>
 						</Container>
 						{/* <img  src={require('../Image/slide1.jpg')} alt="Card image"  /> */}
-						<Carousel.Caption>
-								<h3>First slide label</h3>            
-						</Carousel.Caption>
 						</Carousel.Item>
 						<Carousel.Item>
-						<img  src={require('../Image/slide2.jpg')} alt="Card image"  />
-						<Carousel.Caption>
-								<h3>Second slide label</h3>
-						</Carousel.Caption>
+						<Container>
+							<Row>
+								<Col className="Products">
+								{/* <div > */}
+								<img className="Products" src={require('../Image/m3.jpeg')} alt="Card image"  />
+								<br></br>
+								<p>
+									<h4>Price:14,000Rs</h4>
+									Mobile
+								</p>
+								{/* </div> */}
+								
+								</Col>
+								<Col className="Products">
+								{/* <div > */}
+								<img className="Products" src={require('../Image/trimmer.jpeg')} alt="Card image"  />
+								{/* </div> */}
+								
+								</Col>
+								<Col className="Products">
+								{/* <div > */}
+								<img className="Products" src={require('../Image/pendrive.jpeg')} alt="Card image"  />
+								{/* </div> */}
+								
+								</Col>
+								<Col className="Products">
+								{/* <div > */}
+								<img className="Products" src={require('../Image/m4.jpeg')} alt="Card image"  />
+								{/* </div> */}
+								
+								</Col>
+								
+							</Row>
+						</Container>
 						</Carousel.Item>
 						<Carousel.Item>
-						<img  src={require('../Image/slide3.jpg')} alt="Card image"  />
-
-						<Carousel.Caption>
-								<h3>Third slide label</h3>
-						</Carousel.Caption>
+						<Container>
+							<Row>
+								<Col className="Products">
+								{/* <div > */}
+								<img className="Products" src={require('../Image/mobile_stand.jpeg')} alt="Card image"  />
+								{/* </div> */}
+								
+								</Col>
+								<Col className="Products">
+								{/* <div > */}
+								<img className="Products" src={require('../Image/trimmer.jpeg')} alt="Card image"  />
+								{/* </div> */}
+								
+								</Col>
+								<Col className="Products">
+								{/* <div > */}
+								<img className="Products" src={require('../Image/m4.jpeg')} alt="Card image"  />
+								{/* </div> */}
+								
+								</Col>
+								<Col className="Products">
+								{/* <div > */}
+								<img className="Products" src={require('../Image/m2.jpeg')} alt="Card image"  />
+								{/* </div> */}
+								
+								</Col>
+								
+							</Row>
+						</Container>
 						</Carousel.Item>
 				</Carousel>
 			</div>
