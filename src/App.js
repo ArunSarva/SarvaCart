@@ -9,6 +9,7 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 // import modal from './components/modal';
 import Product_Navbar from './components/Product_Navbar';
+import product from './components/product';
 // import browserHistory from "../util/browserHistory"
 
 
@@ -26,7 +27,7 @@ function App() {
             <Route exact path="/" component={Login}></Route>
             <Route exact path="/signup" component={Signup}></Route>
             <Route exact path="/product_navbar" component={Product_Navbar}></Route>
-            {/* <Route exact path="/Home" component={Info}></Route> */}
+            <Route exact path="/pro" component={product}></Route>
           </Switch>
         </Router>
     </div>
