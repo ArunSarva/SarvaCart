@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './CSS/Signup.css'
-import { Form } from 'react-bootstrap';
+import { Form,ModalFooter } from 'react-bootstrap';
 
-import { Container, Button, Alert, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Container, Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
 class Signup extends Component {
     state = {
@@ -36,14 +36,14 @@ class Signup extends Component {
 					<Form.Label>Password</Form.Label>
 					<Form.Control type="password" placeholder="Password" />
 				</Form.Group>
-				<Button color="primary Signup_btn">Signup</Button>
-				<Button color="secondary" onClick={this.toggleModal.bind(this)}>Cancel</Button>							
+				{/* <Button color="primary Signup_btn">Signup</Button> */}
+				{/* <Button color="secondary" onClick={this.toggleModal.bind(this)}>Cancel</Button>							 */}
 			</Form>
 			</ModalBody>
-			{/* <ModalFooter>
-			<button  className="Register" > Register </button>
-	<button  className="Cancel" > Cancel </button>
-			</ModalFooter> */}
+			<ModalFooter>
+			<Button color="primary">Signup</Button>
+			<Button color="secondary" onClick={this.toggleModal.bind(this)}>Cancel</Button>
+			</ModalFooter>
 			</Modal>
 		</Container>
         );

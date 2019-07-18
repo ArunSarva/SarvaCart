@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './CSS/Login.css';
 import { Form } from 'react-bootstrap';
 
-import { Container, Button, Alert, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Container, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
 class Login extends Component {
@@ -36,10 +36,6 @@ class Login extends Component {
 						<Form.Label>Password</Form.Label>
 						<Form.Control type="password" placeholder="Password" />
 					</Form.Group>
-					<Form.Group controlId="formBasicChecbox">
-						<Form.Check type="checkbox" label="Check me out" />
-					</Form.Group>
-					
 				</Form>
 				</ModalBody>
 				<ModalFooter>

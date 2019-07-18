@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Button, Alert, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Container, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 class modal extends Component {
     state = {

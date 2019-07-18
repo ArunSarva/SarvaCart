@@ -1,13 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router,Route,Switch,Redirect } from 'react-router-dom';
-import { Button,Nav,Form,Navbar,FormControl } from 'react-bootstrap';
+import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+// import { Button,Nav,Form,Navbar,FormControl } from 'react-bootstrap';
 // import Register from './components/Register';
 // import Login from './components/Login';
 import Home from './components/Home';
 import Navbar1 from './components/Navbar1';
 import Signup from './components/Signup';
 import Login from './components/Login';
-import modal from './components/modal';
+// import modal from './components/modal';
 import Product_Navbar from './components/Product_Navbar';
 // import browserHistory from "../util/browserHistory"
 

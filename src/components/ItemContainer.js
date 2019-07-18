@@ -6,7 +6,9 @@ class ItemContainer extends Component {
 		return (
 			<Container>
 				<Row>
-					<Col>1 </Col>
+					<Col>
+					
+					</Col>
 					<Col >2</Col>
 					<Col>3 </Col>
 					<Col>4 </Col>
