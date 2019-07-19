@@ -17,7 +17,7 @@ class Signup extends Component {
     render() {
         return (
 			<Container>
-			<Button color="primary Sign_up" onClick={this.toggleModal.bind(this)}>Signup</Button>
+			{/* <Button color="primary Sign_up" onClick={this.toggleModal.bind(this)}>Signup</Button> */}
 			<Modal isOpen={this.state.modalIsOpen}>
 			<ModalHeader toggle={this.toggleModal.bind(this)}>Register</ModalHeader>
 			<ModalBody>
@@ -26,7 +26,7 @@ class Signup extends Component {
 					<Form.Label>Name</Form.Label>
 					<Form.Control type="text" placeholder="Name" />
 					<Form.Label>Email address</Form.Label>
-					<Form.Control type="email" placeholder="Enter email" />
+					<Form.Control type="email" placeholder="Enter email" /> 
 					<Form.Text className="text-muted">
 					We'll never share your email with anyone else.
 					</Form.Text>

@@ -7,7 +7,7 @@ import Product_Navbar from './Product_Navbar';
 import Product_slider from './Product_slider';
 import './CSS/Home.css'
 import Footer from './Footer';
-import product from './product';
+import Product from './Product';
 class Home extends Component {
     render() {
         return (
@@ -17,7 +17,7 @@ class Home extends Component {
                 {/* <ItemContainer/> */}
                 <div className ="free_space"></div>
                 <Product_slider/>
-                <product/>
+                {/* <Product/> */}
                 <Footer/>
             </div>
         );

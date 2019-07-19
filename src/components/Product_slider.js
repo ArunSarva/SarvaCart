@@ -6,7 +6,7 @@ class Product_slider extends Component {
 	render() {
 		return (
 			<div>
-					<Carousel className="Slider">
+					<Carousel className="Slider" bg="primary">
 						<Carousel.Item>
 						<Container>
 							<Row>

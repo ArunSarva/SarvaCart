@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
 import { Col,Row,Container } from 'react-bootstrap';
-
+import './CSS/items.css'
 class ItemContainer extends Component {
 	render() {
 		return (
 			<Container>
 				<Row>
 					<Col>
-					
+					<img className="items" src={require('../Image/mobile2.jpg')} />					
 					</Col>
-					<Col >2</Col>
-					<Col>3 </Col>
-					<Col>4 </Col>
+					<Col >
+					<img className="items" src={require('../Image/mobile2.jpg')} />
+
+					</Col>
+					<Col>
+					<img className="items" src={require('../Image/mobile2.jpg')} />					
+					 </Col>
+					<Col>
+					<img className="items" src={require('../Image/mobile2.jpg')} />
+					
+					 </Col>
+					 <Col>
+					<img className="items" src={require('../Image/mobile2.jpg')} />
+					
+					 </Col>
 				</Row>
-				<Row>
-					<Col>1 </Col>
-					<Col>2</Col>
-					<Col>3 </Col>
-					<Col>4 </Col>
-				</Row>
+				
 			</Container>
 			
 		);

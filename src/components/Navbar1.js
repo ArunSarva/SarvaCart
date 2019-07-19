@@ -10,7 +10,7 @@ class Navbar1 extends Component {
 		return (
 			<div>
 				<Navbar className="Nav_bar " bg="primary" variant="dark">
-          <Navbar.Brand href="#home">Sarva</Navbar.Brand>
+          <Navbar.Brand href="./Home">Sarva</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
           <Form inline className="mr-auto">
@@ -18,9 +18,9 @@ class Navbar1 extends Component {
             {/* <Button variant="outline-info">Search</Button> */}
           </Form>
           <Nav >
-            <Nav.Link className="Nav_signup" href="#home">Sign Up</Nav.Link>
-            <Nav.Link href="#features">Login</Nav.Link>
-            <Nav.Link href="#pricing">Cart<img className="Cart"  src={require('../Image/cart.png')} alt="Card image"  /></Nav.Link>
+            <Nav.Link className="Nav_signup" href="./Signup">Sign Up</Nav.Link>
+            <Nav.Link href="./Login">Login</Nav.Link>
+            <Nav.Link href="/Cart">Cart<img className="Cart"  src={require('../Image/cart.png')} alt="Card image"  /></Nav.Link>
           </Nav>  
           </Navbar.Collapse>        
         </Navbar>				
@@ -28,5 +28,4 @@ class Navbar1 extends Component {
 		);
 	}
 }
-
 export default Navbar1;
