@@ -1,9 +1,23 @@
+
+body
+{
+align-items: center;
+justify-content: center;
+}
 .Product_size
 {
     height: 250px;
     width: 130px;
 }
-.Item_button{
-    border: none;
-    background-color: aliceblue;
+.container_row{
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+.container_col{
+    align-items: center;
+
+}
+h1{
+    margin-left:45%; 
 }

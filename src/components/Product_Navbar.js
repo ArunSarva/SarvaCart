@@ -10,12 +10,12 @@ class Product_Navbar extends Component {
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="mr-auto">
-				<NavDropdown className="Nav_DropDown" title="Electronics" id="collasible-nav-dropdown">
-						<NavDropdown className="Nav_DropDown" title="Mobile" id="dropdown-nav-drop-right">
-						<NavDropdown.Item href="./pro">Nokia</NavDropdown.Item>
+				<NavDropdown className="Nav_DropDown Nav_start" title="Electronics" id="collasible-nav-dropdown">
+						<NavDropdown className="dropdown-button-drop-right" title="Mobile" id="dropdown-nav-drop-right">
+						<NavDropdown.Item href="./Nokia">Nokia</NavDropdown.Item>
 						<NavDropdown.Item href="./OnePlus">OnePlus</NavDropdown.Item>
 						<NavDropdown.Item href="./Samsung">Samsung</NavDropdown.Item>
-						<NavDropdown.Item href="./Moto">Moto</NavDropdown.Item>
+						<NavDropdown.Item href="./Honor">Honor</NavDropdown.Item>
 						</NavDropdown>
 						<NavDropdown.Item href="#action/3.2">Mobile Accessories</NavDropdown.Item>
 						<NavDropdown.Item href="#action/3.3">Laptops</NavDropdown.Item>

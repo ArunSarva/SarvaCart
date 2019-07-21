@@ -11,6 +11,12 @@ import Login from './components/Login';
 import Product_Navbar from './components/Product_Navbar';
 import Product from './components/Product';
 import ItemContainer from './components/ItemContainer';
+import Admin_Home from './components/Admin_Home';
+import Nokia from './components/Nokia';
+import Honor from './components/Honor';
+import Samsung from './components/Samsung';
+import Oneplus from './components/Oneplus';
+import Oppo from './components/Oppo';
 // import browserHistory from "../util/browserHistory"
 
 
@@ -20,7 +26,7 @@ function App() {
         <div>
         
         </div>
-        <Navbar1/>
+        {/* <Navbar1/> */}
         {/* <Product_Navbar/> */}
         <Router>
           <Switch>
@@ -30,6 +36,12 @@ function App() {
             <Route exact path="/product_navbar" component={Product_Navbar}></Route>
             <Route exact path="/pro" component={Product}></Route>
             <Route exact path="/item" component={ItemContainer}></Route>
+            <Route exact path="/Oppo" component={Oppo}></Route>
+            <Route exact path="/Samsung" component={Samsung}></Route>
+            <Route exact path="/Nokia" component={Nokia}></Route>
+            <Route exact path="/Oneplus" component={Oneplus}></Route>
+            <Route exact path="/Honor" component={Honor}></Route>
+
 
           </Switch>
         </Router>

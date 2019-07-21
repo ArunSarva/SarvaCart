@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-// import { Col,Row} from 'react-bootstrap';
 import { Container, Button, Modal, ModalHeader, ModalBody,ModalFooter,Row,Col } from 'reactstrap';
 import './CSS/Product.css';
 import Product_Navbar from './Product_Navbar';
 import Footer from './Footer'
 import Navbar1 from './Navbar1'
-
-class product extends Component {
-
+class Nokia extends Component {
+  
 state = {
     visible: true,
     mobile1Open: false,
@@ -51,7 +49,8 @@ render() {
     return (
         <div>
             <Navbar1/>
-            <Product_Navbar/>        
+            <Product_Navbar/>  
+            <h1><b>Nokia</b>    </h1>  
         <Container>
             <Row className="container_row">
 					<Col className="container_col">
@@ -157,4 +156,4 @@ render() {
 }
 }
 
-export default product;
+export default Nokia;

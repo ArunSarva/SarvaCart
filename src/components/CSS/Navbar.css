@@ -1,10 +1,14 @@
-.Nav_bar{
-    color: aliceblue;
+.navbar{
+    color: green;
 }
 .logo
 {
-    height: 50px;
-    width: 100px;
+    height: 1%;
+    width: 15%;
+}
+.brand{
+    width:75%;
+    height: 1%;
 }
 /* .Nav_signup{
     padding-left: 250px;
@@ -13,4 +17,8 @@
 .Cart{
     height: 35px;
     width: 35px;
+}
+.search{
+   margin-left: 200%;
+   width: 200%;
 }

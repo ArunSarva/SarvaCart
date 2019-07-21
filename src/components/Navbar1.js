@@ -10,13 +10,17 @@ class Navbar1 extends Component {
 		return (
 			<div>
 				<Navbar className="Nav_bar " bg="primary" variant="dark">
-          <Navbar.Brand href="./Home">Sarva</Navbar.Brand>
+          <Navbar className="brand" href="./Home"><img className="logo"  src={require('../Image/logo.jpg')} alt="Logo image"  />
+          <Form >
+            <FormControl type="text" placeholder="Search" className=" search" />
+          </Form>
+          </Navbar>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-          <Form inline className="mr-auto">
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            {/* <Button variant="outline-info">Search</Button> */}
-          </Form>
+          {/* <input type="text" placeholder="Search" className="search" name="name" /> */}
+          {/* <Form >
+            <FormControl type="text" placeholder="Search" className="mr-sm-2 search" />
+          </Form> */}
           <Nav >
             <Nav.Link className="Nav_signup" href="./Signup">Sign Up</Nav.Link>
             <Nav.Link href="./Login">Login</Nav.Link>
