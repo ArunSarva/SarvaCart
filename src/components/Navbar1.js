@@ -10,11 +10,11 @@ class Navbar1 extends Component {
 		return (
 			<div>
 				<Navbar className="Nav_bar " bg="primary" variant="dark">
-          <Navbar className="brand" href="./Home"><img className="logo"  src={require('../Image/logo.jpg')} alt="Logo image"  />
+          <Navbar.Brand className="brand" href="./Home"><img className="logo"  src={require('../Image/logo.jpg')} alt="Logo image"  />
+       </Navbar.Brand>
           <Form >
             <FormControl type="text" placeholder="Search" className=" search" />
           </Form>
-          </Navbar>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
           {/* <input type="text" placeholder="Search" className="search" name="name" /> */}

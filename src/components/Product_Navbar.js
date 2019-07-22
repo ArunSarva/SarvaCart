@@ -30,27 +30,21 @@ class Product_Navbar extends Component {
 						<NavDropdown.Divider />
 						<NavDropdown.Item href="#action/3.4">Washing Machine</NavDropdown.Item>
 					</NavDropdown>
-					<NavDropdown  className="Nav_DropDown" title="Men" id="collasible-nav-dropdown">
-						<NavDropdown.Item href="#action/3.1">Watches</NavDropdown.Item>
-						<NavDropdown.Item href="#action/3.2">Clothing</NavDropdown.Item>
-						<NavDropdown.Item href="#action/3.3">Footwear</NavDropdown.Item>
-						<NavDropdown.Divider />
-						<NavDropdown.Item href="#action/3.4">Top wear</NavDropdown.Item>
-					</NavDropdown>	
-					<NavDropdown  className="Nav_DropDown" title="Men" id="collasible-nav-dropdown">
-						<NavDropdown className="Nav_DropDown" title="watch" href="#action/3.1">
+					<NavDropdown  className="Nav_DropDown" title="Clothing" id="collasible-nav-dropdown">
+						<NavDropdown className="Nav_DropDown" title="Men" href="#action/3.1">
 							<NavDropdown.Item>
-								<Dropdown.Item eventKey="1">Action</Dropdown.Item>
-								<Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-								<Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-								<Dropdown.Divider />
-								<Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
-								</NavDropdown.Item>
+							<Dropdown.Item eventKey="2">watch</Dropdown.Item>
+								<Dropdown.Item eventKey="1">Clothing</Dropdown.Item>
+								<Dropdown.Item eventKey="2">Top wear</Dropdown.Item>
+							</NavDropdown.Item>
 						</NavDropdown>
-						<NavDropdown.Item href="#action/3.2">Clothing</NavDropdown.Item>
-						<NavDropdown.Item href="#action/3.3">Footwear</NavDropdown.Item>
-						<NavDropdown.Divider />
-						<NavDropdown.Item href="#action/3.4">Top wear</NavDropdown.Item>
+						<NavDropdown className="Nav_DropDown" title="Women" href="#action/3.1">
+							<NavDropdown.Item>
+							<Dropdown.Item eventKey="2">Watch</Dropdown.Item>
+								<Dropdown.Item eventKey="1">Clothing</Dropdown.Item>
+								<Dropdown.Item eventKey="2">Top wear</Dropdown.Item>
+							</NavDropdown.Item>
+						</NavDropdown>
 					</NavDropdown>				
 					
 				</Nav>

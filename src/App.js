@@ -17,6 +17,7 @@ import Honor from './components/Honor';
 import Samsung from './components/Samsung';
 import Oneplus from './components/Oneplus';
 import Oppo from './components/Oppo';
+import Addproduct from './components/Addproduct';
 // import browserHistory from "../util/browserHistory"
 
 
@@ -41,6 +42,8 @@ function App() {
             <Route exact path="/Nokia" component={Nokia}></Route>
             <Route exact path="/Oneplus" component={Oneplus}></Route>
             <Route exact path="/Honor" component={Honor}></Route>
+            <Route exact path="/Addproduct" component={Addproduct}></Route>
+
 
 
           </Switch>
