@@ -15,12 +15,42 @@ class Signup extends Component {
 			Name: '',
 			Email: '',
 			Password: '',
+			Name_message:"",
+			Email_message:"",
+			Password_message:""
         }
 	}
 	AddUser = async () => {
-        const { id, Name,Email,Password } = this.state
-        const payload = { Name,Email,Password}
-
+        const { Name,Email,Password } = this.state
+		const payload = { Name,Email,Password}
+		const reg="/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,10})$/";
+		const reg_pass= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{4,8}$/;
+		if(this.state.Email===''&&this.state.Name===""&& this.state.Password==="" ){
+			if(this.state.Email===''||reg.test(this.state.Email))
+			{
+				if(this.state.Email==='')
+				{
+					this.state.Email_message="Email cnt be empty"
+				}
+				else{
+					this.state.Email_message="Email Not valid"
+				}
+			}
+			else if(this.state.Password===''&& reg_pass.test(this.state.Password) )
+			{
+				if(this.state.Password==='')
+				{
+					this.state.Password_message="Password should not be empty";
+				}
+				else{
+					this.state.Password_message="Password pattron not match";
+				}
+			}
+			else{
+				this.state.Name_message="Name should not be empty";
+			}
+		}
+else{
         await api.signup(payload).then(res => {
             window.alert(`Movie inserted successfully`)
             this.setState({
@@ -29,11 +59,9 @@ class Signup extends Component {
                 Password: '',
             })
 		})
-		.catch(err => {
-			console.log(err)
-			window.alert(err)
-			})
+		
 		}
+	}
     // state = {
 	// 	visible: true,
 	// 	modalIsOpen: true,
