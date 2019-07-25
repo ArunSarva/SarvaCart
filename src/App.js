@@ -18,6 +18,8 @@ import Samsung from './components/Samsung';
 import Oneplus from './components/Oneplus';
 import Oppo from './components/Oppo';
 import Addproduct from './components/Addproduct';
+// import Form from 'react-bootstrap/FormControl';
+// import Form from './components/Form'
 // import Create from './components/Create';
 // import browserHistory from "../util/browserHistory"
 
@@ -44,7 +46,7 @@ function App() {
             <Route exact path="/Oneplus" component={Oneplus}></Route>
             <Route exact path="/Honor" component={Honor}></Route>
             <Route exact path="/Addproduct" component={Addproduct}></Route>
-            {/* <Route exact path="/create" component={Create}></Route> */}
+            {/* <Route exact path="/form" component={Form}></Route> */}
 
           </Switch>
         </Router>

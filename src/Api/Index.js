@@ -5,14 +5,14 @@ const api = axios.create({
 })
 export const signup = payload => api.post('/Signup', payload)
 
-// export const getAllMovies = () => api.get(`/movies`)
+export const Login = payload => api.post(`/Login`,payload)
 // export const updateMovieById = (id, payload) => api.put(`/movie/${id}`, payload)
 // export const deleteMovieById = id => api.delete(`/movie/${id}`)
 // export const getMovieById = id => api.get(`/movie/${id}`)
 
 const apis = {
-    signup
-    // getAllMovies,
+    signup,
+    Login,
     // updateMovieById,
     // deleteMovieById,
     // getMovieById,
