@@ -17,7 +17,7 @@ class Product_Navbar extends Component {
 						<NavDropdown.Item href="./Samsung">Samsung</NavDropdown.Item>
 						<NavDropdown.Item href="./Honor">Honor</NavDropdown.Item>
 						</NavDropdown>
-						<NavDropdown.Item href="#action/3.2">Mobile Accessories</NavDropdown.Item>
+						<NavDropdown.Item href="/Shoe">Mobile Accessories</NavDropdown.Item>
 						<NavDropdown.Item href="#action/3.3">Laptops</NavDropdown.Item>
 						<NavDropdown.Item href="#action/3.4">Desktop PCs</NavDropdown.Item>
 						<NavDropdown.Divider />

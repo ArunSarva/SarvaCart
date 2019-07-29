@@ -7,7 +7,7 @@ class Footer extends Component {
 			<div>
 				<Card className="text-center" bg="dark" variant="light">
 					<Card.Header>
-						<p>
+						<p className="p">
 							<b>Sarva Cart</b>
 							<br></br>
 							Mysore   Mandya   Madur   Kennalu

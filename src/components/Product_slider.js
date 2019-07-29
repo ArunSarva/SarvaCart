@@ -14,7 +14,7 @@ class Product_slider extends Component {
 								{/* <div > */}
 								<img className="Products" src={require('../Image/Mobiles/Nokia/nokia1.jpg')} alt="Card image"  />
 								<p>
-									<h4>Price:15,000Rs</h4>
+									<h6>Price:15,000Rs</h6>
 									Mobile
 								</p>
 								{/* </div> */}
@@ -24,7 +24,7 @@ class Product_slider extends Component {
 								{/* <div > */}
 								<img className="Products" src={require('../Image/Mobiles/Honor/honor1.jpg')} alt="Card image"  />
 								<p>
-									<h4>Price:14,000Rs</h4>
+									<h6>Price:14,000Rs</h6>
 									Mobile
 								</p>
 								{/* </div> */}
@@ -34,7 +34,7 @@ class Product_slider extends Component {
 								{/* <div > */}
 								<img className="Products" src={require('../Image/mobile1.jpg')} alt="Card image"  />
 								<p>
-									<h4>Price:1,000Rs</h4>
+									<h6>Price:1,000Rs</h6>
 									Shoe
 								</p>
 								{/* </div> */}
@@ -45,7 +45,7 @@ class Product_slider extends Component {
 								<img className="Products" src={require('../Image/mobile2.jpg')} alt="Card image"  />
 								{/* </div> */}
 								<p>
-									<h4>Price:1,400Rs</h4>
+									<h6>Price:1,400Rs</h6>
 									Watch
 								</p>
 								
@@ -63,10 +63,10 @@ class Product_slider extends Component {
 							<Row>
 								<Col className="Products">
 								{/* <div > */}
-								<img className="Products" src={require('../Image/m3.jpeg')} alt="Card image"  />
+								<img className="Products" src={require('../Image/Mobiles/Nokia/nokia2.jpg')} alt="Card image"  />
 								<br></br>
 								<p>
-									<h4>Price:14,000Rs</h4>
+									<h6>Price:14,000Rs</h6>
 									Mobile
 								</p>
 								{/* </div> */}
@@ -74,7 +74,7 @@ class Product_slider extends Component {
 								</Col>
 								<Col className="Products">
 								{/* <div > */}
-								<img className="Products" src={require('../Image/mobile3.jpg')} alt="Card image"  />
+								<img className="Products" src={require('../Image/Mobiles/Honor/honor2.jpg')} alt="Card image"  />
 								{/* </div> */}
 								
 								</Col>
@@ -99,13 +99,13 @@ class Product_slider extends Component {
 							<Row>
 								<Col className="Products">
 								{/* <div > */}
-								<img className="Products" src={require('../Image/mobile5.jpg')} alt="Card image"  />
+								<img className="Products" src={require('../Image/Mobiles/Nokia/nokia3.jpg')} alt="Card image"  />
 								{/* </div> */}
 								
 								</Col>
 								<Col className="Products">
 								{/* <div > */}
-								<img className="Products" src={require('../Image/mobile6.jpg')} alt="Card image"  />
+								<img className="Products" src={require('../Image/Mobiles/Honor/honor2.jpg')} alt="Card image"  />
 								{/* </div> */}
 								
 								</Col>

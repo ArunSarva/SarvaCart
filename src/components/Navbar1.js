@@ -22,9 +22,9 @@ class Navbar1 extends Component {
             <FormControl type="text" placeholder="Search" className="mr-sm-2 search" />
           </Form> */}
           <Nav >
-            <Nav.Link className="Nav_signup" href="./Signup">Sign Up</Nav.Link>
+            <Nav.Link className="Nav_signup" href="./Signup">SignUp</Nav.Link>
             <Nav.Link href="./">Login</Nav.Link>
-            <Nav.Link href="/Cart">Cart<img className="Cart"  src={require('../Image/cart.png')} alt="Card image"  /></Nav.Link>
+            <Nav.Link href="/Cart"><img className="Cart"  src={require('../Image/cart.png')} alt="Card image"  /></Nav.Link>
           </Nav>  
           </Navbar.Collapse>        
         </Navbar>				

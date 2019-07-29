@@ -64,7 +64,7 @@ render() {
             <img className="Products" src={require('../Image/Mobiles/Nokia/nokia1.jpg')} />
             </ModalBody>
             <ModalFooter>
-                <Button color="primary">Add to Cart</Button>
+                <Button color="primary"  >Add to Cart</Button>
                 <Button color="secondary" onClick={this.mobile1.bind(this)}>Buy now</Button>
             </ModalFooter>
             </Modal>

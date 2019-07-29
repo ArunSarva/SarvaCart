@@ -4,6 +4,7 @@ const api = axios.create({
     baseURL: 'http://localhost:8000',
 })
 export const signup = payload => api.post('/Signup', payload)
+export const AddCart = payload => api.post('/AddCart', payload)
 
 export const Login = payload => api.post(`/Login`,payload)
 // export const updateMovieById = (id, payload) => api.put(`/movie/${id}`, payload)

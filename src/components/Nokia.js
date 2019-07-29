@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Button, Modal, ModalHeader, ModalBody,ModalFooter,Row,Col } from 'reactstrap';
 import './CSS/Product.css';
+import api from '../Api/Index';
+import browserHistory from '../util/browserHistory'
 import Product_Navbar from './Product_Navbar';
 import Footer from './Footer'
 import Navbar1 from './Navbar1'
@@ -14,6 +16,13 @@ state = {
     mobile4Open: false,
     mobile5Open: false,
     mobile6Open: false,
+    Product_Brand:'',
+    Product_Name:'',
+    Product_Discription:'',
+    Product_Price:'',
+    Quantity:'',
+    Total_price:''
+   
   }
 mobile1() {
     this.setState({
@@ -45,6 +54,41 @@ mobile1() {
         mobile6Open: ! this.state.mobile6Open
     });
   }
+  AddNokia1 = async () => {
+debugger
+payload = {
+    Product_Brand:"Nokia",
+    Product_Name:'Nokia1',
+    Product_Discription:'This is a mobile1 with 4gb RAM 64Gb ROM Black in colour',
+    Product_Price:14000,
+    Quantity:1,
+    Total_price:14000
+   
+  }
+    //   const { Product_Brand,Product_Name,Product_Discription,Product_Price,Quantity,Total_price } = this.state
+      
+    //   this.setState({ 
+    //     Product_Brand:"Nokia",
+    //   Product_Name:'Nokia1',
+    //   Product_Discription:'This is a mobile1 with 4gb RAM 64Gb ROM Black in colour',
+    //   Product_Price:14000,
+    //   Quantity:1,
+    //   Total_price:14000})
+    //   const payload = { Product_Brand,Product_Name,Product_Discription,Product_Price,Quantity,Total_price}
+      console.log(payload)
+    //   await api.AddCart(payload).then(res => {
+    //     window.alert(`Addcart successfully`)			
+    //     this.setState({
+    //         Product_Brand:'',
+    //         Product_Name:'',
+    //         Product_Discription:'',
+    //         Product_Price:'',
+    //         Quantity:'',
+    //         Total_price:''
+    //     })
+    //     browserHistory.push("/");
+    // })
+  }
 render() {
     return (
         <div>
@@ -55,15 +99,28 @@ render() {
             <Row className="container_row">
 					<Col className="container_col">
             <div className="Item_button" onClick={this.mobile1.bind(this)}>
+                
                 <img className="Product_size" src={require('../Image/Mobiles/Nokia/nokia1.jpg')} />
                 </div>
                 <Modal isOpen={this.state.mobile1Open}>
             <ModalHeader toggle={this.mobile1.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
-            <img className="Products" src={require('../Image/Mobiles/Nokia/nokia1.jpg')} />
+            {/* <div className="card"> */}
+                        <div className="card-image ">
+                        <img className="Products" src={require('../Image/Mobiles/Nokia/nokia1.jpg')} />
+                            {/* <span className="card-title"><b>Nokia 1</b></span> */}
+                        </div>
+
+                        <div className="card-content discription">
+                        <p className="card-title"><b>Nokia 1</b></p>
+                            <p>This is a mobile1 with 4gb RAM 64Gb ROM Black in colour</p>
+                            <p><b>Price: 14,000$</b></p>
+                        </div>
+                 {/* </div> */}
+            
             </ModalBody>
             <ModalFooter>
-                <Button color="primary">Add to Cart</Button>
+                <Button color="primary" onClick={this.AddNokia1}>Add to Cart</Button>
                 <Button color="secondary" onClick={this.mobile1.bind(this)}>Buy now</Button>
             </ModalFooter>
             </Modal>
@@ -77,7 +134,16 @@ render() {
             <Modal isOpen={this.state.mobile2Open}>
             <ModalHeader toggle={this.mobile2.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
-            <img className="Products" src={require('../Image/Mobiles/Nokia/nokia2.jpg')} />
+            <div className="card-image ">
+                <img className="Products" src={require('../Image/Mobiles/Nokia/nokia2.jpg')} />
+                    {/* <span className="card-title"><b>Nokia 1</b></span> */}
+                </div>
+
+                <div className="card-content discription">
+                <p className="card-title"><b>Nokia 2</b></p>
+                    <p>This is a mobile1 with 4gb RAM 64Gb ROM gray in colour</p>
+                    <p><b>Price: 15,000$</b></p>
+            </div>
             </ModalBody>
             <ModalFooter>
                 <Button color="primary">Add to Cart</Button>
@@ -92,7 +158,16 @@ render() {
             <Modal isOpen={this.state.mobile3Open}>
             <ModalHeader toggle={this.mobile3.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
-            <img className="Products" src={require('../Image/Mobiles/Nokia/nokia3.jpg')} />
+            <div className="card-image ">
+                <img className="Products" src={require('../Image/Mobiles/Nokia/nokia3.jpg')} />
+                    {/* <span className="card-title"><b>Nokia 1</b></span> */}
+                </div>
+
+                <div className="card-content discription">
+                <p className="card-title"><b>Nokia 3</b></p>
+                    <p>This is a mobile1 with 4gb RAM 64Gb ROM gray in colour</p>
+                    <p><b>Price: 13,500$</b></p>
+            </div>
             </ModalBody>
             <ModalFooter>
                 <Button color="primary">Add to Cart</Button>
@@ -110,7 +185,16 @@ render() {
             <Modal isOpen={this.state.mobile4Open}>
             <ModalHeader toggle={this.mobile4.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
-            <img className="Products" src={require('../Image/Mobiles/Nokia/nokia4.jpg')} />
+            <div className="card-image ">
+                <img className="Products" src={require('../Image/Mobiles/Nokia/nokia4.jpg')} />
+                    {/* <span className="card-title"><b>Nokia 1</b></span> */}
+                </div>
+
+                <div className="card-content discription">
+                <p className="card-title"><b>Nokia 2</b></p>
+                    <p>This is a mobile1 with 2gb RAM 64Gb ROM gray in colour</p>
+                    <p><b>Price: 15,500$</b></p>
+            </div>
             </ModalBody>
             <ModalFooter>
                 <Button color="primary">Add to Cart</Button>
@@ -125,7 +209,16 @@ render() {
             <Modal isOpen={this.state.mobile5Open}>
             <ModalHeader toggle={this.mobile5.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
-            <img className="Products" src={require('../Image/Mobiles/Nokia/nokia5.jpg')} />
+            <div className="card-image ">
+                <img className="Products" src={require('../Image/Mobiles/Nokia/nokia5.jpg')} />
+                    {/* <span className="card-title"><b>Nokia 1</b></span> */}
+                </div>
+
+                <div className="card-content discription">
+                <p className="card-title"><b>Nokia 5</b></p>
+                    <p>This is a mobile1 with 4gb RAM 64Gb ROM gray in colour</p>
+                    <p><b>Price: 15000$</b></p>
+            </div>
             </ModalBody>
             <ModalFooter>
                 <Button color="primary">Add to Cart</Button>
