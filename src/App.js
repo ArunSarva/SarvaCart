@@ -19,6 +19,8 @@ import Oneplus from './components/Oneplus';
 import Oppo from './components/Oppo';
 import Addproduct from './components/Addproduct';
 import Cart from './components/Cart';
+import Home1 from './components/Home1';
+import Cart1 from './components/Cart1';
 // import Form from 'react-bootstrap/FormControl';
 // import Form from './components/Form'
 // import Create from './components/Create';
@@ -35,7 +37,7 @@ function App() {
         {/* <Product_Navbar/> */}
         <Router>
           <Switch>
-            <Route exact path="/Home" component={Home}></Route>
+            <Route exact path="/Home" component={Home1}></Route>
             <Route exact path="/" component={Login}></Route>
             <Route exact path="/signup" component={Signup}></Route>
             <Route exact path="/product_navbar" component={Product_Navbar}></Route>
@@ -46,8 +48,8 @@ function App() {
             <Route exact path="/Nokia" component={Nokia}></Route>
             <Route exact path="/Oneplus" component={Oneplus}></Route>
             <Route exact path="/Honor" component={Honor}></Route>
-            {/* <Route exact path="/Shoe" component={Shoe}></Route> */}
-            <Route exact path="/form" component={Cart}></Route>
+            <Route exact path="/Cart1" component={Cart1}></Route>
+            {/* <Route exact path="/form" component={Cart}></Route> */}
 
           </Switch>
         </Router>

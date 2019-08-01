@@ -3,6 +3,7 @@ import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY} from '../ActionTypes
 
 //add cart action
 export const addToCart= (id)=>{
+    debugger
     return{
         type: ADD_TO_CART,
         id

@@ -24,7 +24,7 @@ class Navbar1 extends Component {
           <Nav >
             <Nav.Link className="Nav_signup" href="./Signup">SignUp</Nav.Link>
             <Nav.Link href="./">Login</Nav.Link>
-            <Nav.Link href="/Cart"><img className="Cart"  src={require('../Image/cart.png')} alt="Card image"  /></Nav.Link>
+            <Nav.Link href="/Cart1"><img className="Cart"  src={require('../Image/cart.png')} alt="Card image"  /></Nav.Link>
           </Nav>  
           </Navbar.Collapse>        
         </Navbar>				

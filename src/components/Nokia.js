@@ -54,9 +54,9 @@ mobile1() {
         mobile6Open: ! this.state.mobile6Open
     });
   }
-  AddNokia1 = async () => {
+  AddNokia1= async () => {
 debugger
-payload = {
+const payload = {
     Product_Brand:"Nokia",
     Product_Name:'Nokia1',
     Product_Discription:'This is a mobile1 with 4gb RAM 64Gb ROM Black in colour',
@@ -65,6 +65,7 @@ payload = {
     Total_price:14000
    
   }
+  console.log(payload)
     //   const { Product_Brand,Product_Name,Product_Discription,Product_Price,Quantity,Total_price } = this.state
       
     //   this.setState({ 
@@ -75,19 +76,23 @@ payload = {
     //   Quantity:1,
     //   Total_price:14000})
     //   const payload = { Product_Brand,Product_Name,Product_Discription,Product_Price,Quantity,Total_price}
-      console.log(payload)
+      
     //   await api.AddCart(payload).then(res => {
     //     window.alert(`Addcart successfully`)			
-    //     this.setState({
-    //         Product_Brand:'',
-    //         Product_Name:'',
-    //         Product_Discription:'',
-    //         Product_Price:'',
-    //         Quantity:'',
-    //         Total_price:''
-    //     })
-    //     browserHistory.push("/");
+    //     // this.setState({
+    //     //     Product_Brand:'',
+    //     //     Product_Name:'',
+    //     //     Product_Discription:'',
+    //     //     Product_Price:'',
+    //     //     Quantity:'',
+    //     //     Total_price:''
+    //     // })
+    //     browserHistory.push("/nokia");
     // })
+    await api.AddCart(payload).then(res => {
+        window.alert(`Add to cart successfully`)		
+        browserHistory.push("/nokia");
+    })
   }
 render() {
     return (
