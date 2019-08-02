@@ -56,7 +56,7 @@ class Login extends Component {
 				}
 				else {
 					a=1;
-					const Password_message = "password is weak use spl char with intiger"
+					const Password_message = "Invalid password"
 					this.setState({ Password_message })
 				}
 			}

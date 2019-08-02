@@ -8,22 +8,12 @@ const Slideshow = () => {
       <Carousel className="Slider">
         <Carousel.Item>
         <img  src={require('../Image/slide1.jpg')} alt="Card image"  />
-          <Carousel.Caption>
-            <h3>First slide label</h3>            
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
         <img  src={require('../Image/slide5.jpg')} alt="Card image"  />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
         <img  src={require('../Image/slide6.jpg')} alt="Card image"  />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     )

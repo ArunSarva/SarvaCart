@@ -66,34 +66,28 @@ const payload = {
    
   }
   console.log(payload)
-    //   const { Product_Brand,Product_Name,Product_Discription,Product_Price,Quantity,Total_price } = this.state
-      
-    //   this.setState({ 
-    //     Product_Brand:"Nokia",
-    //   Product_Name:'Nokia1',
-    //   Product_Discription:'This is a mobile1 with 4gb RAM 64Gb ROM Black in colour',
-    //   Product_Price:14000,
-    //   Quantity:1,
-    //   Total_price:14000})
-    //   const payload = { Product_Brand,Product_Name,Product_Discription,Product_Price,Quantity,Total_price}
-      
-    //   await api.AddCart(payload).then(res => {
-    //     window.alert(`Addcart successfully`)			
-    //     // this.setState({
-    //     //     Product_Brand:'',
-    //     //     Product_Name:'',
-    //     //     Product_Discription:'',
-    //     //     Product_Price:'',
-    //     //     Quantity:'',
-    //     //     Total_price:''
-    //     // })
-    //     browserHistory.push("/nokia");
-    // })
     await api.AddCart(payload).then(res => {
         window.alert(`Add to cart successfully`)		
         browserHistory.push("/nokia");
     })
   }
+  AddNokia2= async () => {
+    debugger
+    const payload = {
+        Product_Brand:"Nokia",
+        Product_Name:'Nokia2',
+        Product_Discription:'This is a mobile1 with 4gb RAM 64Gb ROM gray in colour',
+        Product_Price:15000,
+        Quantity:1,
+        Total_price:15000
+       
+      }
+      console.log(payload)
+        await api.AddCart(payload).then(res => {
+            window.alert(`Add to cart successfully`)		
+            browserHistory.push("/nokia");
+        })
+      }
 render() {
     return (
         <div>
@@ -151,7 +145,7 @@ render() {
             </div>
             </ModalBody>
             <ModalFooter>
-                <Button color="primary">Add to Cart</Button>
+                <Button color="primary" onClick={this.AddNokia2}>Add to Cart</Button>
                 <Button color="secondary" onClick={this.mobile2.bind(this)}>Buy now</Button>
             </ModalFooter>
             </Modal>

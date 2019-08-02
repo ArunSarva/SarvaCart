@@ -18,7 +18,6 @@ import Samsung from './components/Samsung';
 import Oneplus from './components/Oneplus';
 import Oppo from './components/Oppo';
 import Addproduct from './components/Addproduct';
-import Cart from './components/Cart';
 import Home1 from './components/Home1';
 import Cart1 from './components/Cart1';
 // import Form from 'react-bootstrap/FormControl';
@@ -37,7 +36,7 @@ function App() {
         {/* <Product_Navbar/> */}
         <Router>
           <Switch>
-            <Route exact path="/Home" component={Home1}></Route>
+            <Route exact path="/Home" component={Home}></Route>
             <Route exact path="/" component={Login}></Route>
             <Route exact path="/signup" component={Signup}></Route>
             <Route exact path="/product_navbar" component={Product_Navbar}></Route>

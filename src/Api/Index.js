@@ -8,13 +8,18 @@ export const AddCart = payload => api.post('/AddCart', payload)
 
 export const Login = payload => api.post(`/Login`,payload)
 // export const updateMovieById = (id, payload) => api.put(`/movie/${id}`, payload)
-// export const deleteMovieById = id => api.delete(`/movie/${id}`)
+export const Remove_itemById = id => {
+    
+console.log(id)
+api.delete(`/deletecart/${id}`)
+}
 export const getCart = id => api.get(`/Getcart`)
 
 const apis = {
     signup,
     Login,
     AddCart,
+    Remove_itemById,
     // updateMovieById,
     // deleteMovieById,
     getCart

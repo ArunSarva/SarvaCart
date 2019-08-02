@@ -1,0 +1,17 @@
+.Cart_div{
+    /* border: 1px; */
+    background-color:#bdc8db;
+    padding-left: 20%;
+    margin-left: 10%;
+    margin-right: 15%;
+    padding-top: 2%;
+}
+.Cart_btn{
+    height: 25px;
+    width: 1%;
+    align-items: center;
+    
+}
+.Buy_btn{
+    margin-right: 2%;
+}

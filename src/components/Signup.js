@@ -49,13 +49,20 @@ class Signup extends Component {
 					const Password_message = "password is empty "
 					this.setState({ Password_message })
 				}
-				else {
+				else if(this.state.Password.length<=8) {
+					if(!reg_pass.test(this.state.Password)){
 					a=1;
-					const Password_message = "password is weak use spl char with intiger"
+					const Password_message = "password is not valid"
+					this.setState({ Password_message })
+				}}
+				else{
+					a=1;
+					const Password_message = "password should not be more than 8"
 					this.setState({ Password_message })
 				}
-			}
-			if(this.state.Name===""||this.state.Name===null){
+				}
+				
+			if(!this.state.Name===""||this.state.Name===null){
 				a=1;
 				const Name_message = "name is empty "
 					this.setState({ Name_message })
