@@ -5,7 +5,7 @@ const api = axios.create({
 })
 export const signup = payload => api.post('/Signup', payload)
 export const AddCart = payload => api.post('/AddCart', payload)
-
+export const Addproduct = payload => api.post('/Addproduct', payload)
 export const Login = payload => api.post(`/Login`,payload)
 export const updateCart = (id, addedItem) => api.put(`/updateCart/${id}`,addedItem)
 export const Remove_itemById = id => {
@@ -19,6 +19,7 @@ const apis = {
     signup,
     Login,
     AddCart,
+    Addproduct,
     Remove_itemById,
     updateCart,
     // updateMovieById,

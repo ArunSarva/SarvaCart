@@ -40,7 +40,7 @@ class Addproduct extends Component {
 						const Product_Name_message = "Product Name is empty "
 						this.setState({ Product_Name_message })
                     }
-                    if(!this.state.Product_Price)
+                    if(this.state.Product_Price==="")
 					{
 						a=1;
 						const Product_Price_message = "Product Price is empty "
@@ -54,7 +54,7 @@ class Addproduct extends Component {
 					
 				
 				if(a==0){
-					await api.Login(payload).then(res => {
+					await api.Addproduct(payload).then(res => {
 				// window.alert()
 				
 							this.setState({
@@ -73,47 +73,60 @@ class Addproduct extends Component {
 			}
 			}
 
-			handleChangeInputPassword = async event => {
-					const Password =  event.target.value
-					this.setState({ Password })
+			handleChangeInputBrand = async event => {
+					const Product_Brand =  event.target.value
+					this.setState({ Product_Brand })
 			}
 
-			handleChangeInputEmail = async event => {
-					const Email = event.target.value
-					this.setState({ Email })
+			handleChangeInputName = async event => {
+					const Product_Name = event.target.value
+					this.setState({ Product_Name })
 			}
+			handleChangeInputPrice = async event => {
+				const Product_Price =  event.target.value
+				this.setState({ Product_Price})
+		}
+
+		handleChangeInputDiscription = async event => {
+				const Product_Discription = event.target.value
+				this.setState({ Product_Discription })
+		}
 
     render() {
+		const { Product_Brand,Product_Name,Product_Price,Product_Discription } = this.state
         return (
             <div>
                 <Navbar1/>
                 <div className="container">
                   <Form>
                     <Form.Row>
-                      <Form.Group as={Col} controlId="Brand_name">
+                      <Form.Group as={Col} >
                         <Form.Label>Product Brand</Form.Label>
-                        <Form.Control type="text" value= {Product_Brand} placeholder="Enter Brand name" />
-                      </Form.Group>
+                        <Form.Control type="text" onChange={this.handleChangeInputBrand} value= {Product_Brand} placeholder="Enter Brand name" />
+						<span>{this.state.Product_Brand_message}</span>
+					  </Form.Group>
 
-                      <Form.Group as={Col} controlId="Product_name">
+                      <Form.Group as={Col} >
                         <Form.Label>Product name</Form.Label>
-                        <Form.Control type="text" value= {Product_Name} placeholder="Product name" />
-                      </Form.Group>
+                        <Form.Control type="text" onChange={this.handleChangeInputName} value= {Product_Name} placeholder="Product name" />
+						<span>{this.state.Product_Name_message}</span>
+					  </Form.Group>
                     </Form.Row>
 
                     <Form.Group controlId="Price">
                       <Form.Label>Price</Form.Label>
-                      <Form.Control value= {Product_Price} placeholder="Price" />
-                    </Form.Group>
+                      <Form.Control type="number" value= {Product_Price} onChange={this.handleChangeInputPrice} placeholder="Price" />
+					  <span>{this.state.Product_Price_message}</span>
+					</Form.Group>
 
                     <Form.Group controlId="Discription">
                       <Form.Label>Discription</Form.Label>
-                      <Form.Control value= {Product_Discription} placeholder="Discription" />
-                    </Form.Group>
-                      <Button variant="primary" onClick={this.AddUser} type="submit">
-                      Upload Product
-                    </Button>
+                      <Form.Control type="text" value= {Product_Discription} onChange={this.handleChangeInputDiscription} placeholder="Discription" />
+					  <span>{this.state.Product_Discription_message}</span>
+					</Form.Group>
                   </Form>
+				  <Button variant="primary" onClick={this.Addproduct} type="submit">Upload Product</Button>
+
                 </div>
             </div>
         );

@@ -1,11 +1,11 @@
 .Products{
-    width: 25%;
-    height:20%;
-    float: left;
+    width: 35%;
+    /* float: left; */
 }
 .Price_tag{
     color: black;
 }
 .pgh{
-    margin-left: 15%;
+    /* margin-left: 15%; */
+    color:grey;
 }

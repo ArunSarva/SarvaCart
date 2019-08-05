@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav,Navbar, Form,FormControl } from 'react-bootstrap';
+import { Nav,Navbar, Form,FormControl,Button } from 'react-bootstrap';
 import './CSS/Navbar.css';
 
 class Navbar1 extends Component {
@@ -11,6 +11,8 @@ class Navbar1 extends Component {
        </Navbar.Brand>
           <Form >
             <FormControl type="text" placeholder="Search" className=" search" />
+            <Button className="search_btn" onClick={this.Search}><img className="search_icon" src={require('../Image/search.png')} alt="Logo image"  /></Button>
+            {/* <input className="search_icon" type="submit" value="" /> */}
           </Form>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
