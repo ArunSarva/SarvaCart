@@ -88,6 +88,40 @@ const payload = {
             browserHistory.push("/nokia");
         })
       }
+      AddNokia3= async () => {
+        debugger
+        const payload = {
+            Product_Brand:"Nokia",
+            Product_Name:'Nokia3',
+            Product_Discription:'This is a mobile1 with 4gb RAM 64Gb ROM gray in colour',
+            Product_Price:13500,
+            Quantity:1,
+            Total_price:13500
+           
+          }
+          console.log(payload)
+            await api.AddCart(payload).then(res => {
+                window.alert(`Add to cart successfully`)		
+                browserHistory.push("/nokia");
+            })
+          }
+          AddNokia4= async () => {
+            debugger
+            const payload = {
+                Product_Brand:"Nokia",
+                Product_Name:'Nokia4',
+                Product_Discription:'This is a mobile1 with 4gb RAM 64Gb ROM gray in colour',
+                Product_Price:14500,
+                Quantity:1,
+                Total_price:14500
+               
+              }
+              console.log(payload)
+                await api.AddCart(payload).then(res => {
+                    window.alert(`Add to cart successfully`)		
+                    browserHistory.push("/nokia");
+                })
+              }
 render() {
     return (
         <div>
@@ -169,7 +203,7 @@ render() {
             </div>
             </ModalBody>
             <ModalFooter>
-                <Button color="primary">Add to Cart</Button>
+                <Button color="primary" onClick={this.AddNokia3}>Add to Cart</Button>
                 <Button color="secondary" onClick={this.mobile3.bind(this)}>Buy now</Button>
             </ModalFooter>
             </Modal>
@@ -196,7 +230,7 @@ render() {
             </div>
             </ModalBody>
             <ModalFooter>
-                <Button color="primary">Add to Cart</Button>
+                <Button color="primary" onClick={this.AddNokia4}>Add to Cart</Button>
                 <Button color="secondary" onClick={this.mobile4.bind(this)}>Buy now</Button>
             </ModalFooter>
             </Modal>

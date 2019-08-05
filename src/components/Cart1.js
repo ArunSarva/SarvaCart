@@ -18,18 +18,46 @@ class Cart1 extends Component {
             Quantitys:0
         }
     }
-    add=() =>{
-        this.setState({Quantitys:this.state.Quantitys+1});
+    add=(id) =>{
+        let addedItem = this.state.Carts.find(item=> item._id === id)
+        addedItem.Quantity += 1
+        let newTotal = addedItem.Total_price + addedItem.Product_Price
+        addedItem.Total_price=newTotal
+             api.updateCart(id,addedItem).then(res => {
+                    window.location.reload()
+                    
+                })
     }
-    sub=()=>{
-        this.setState({Quantitys:this.state.Quantitys-1});
-    }
-    Remove_item = (id) => {
-        // event.preventDefault()
+    sub=(id)=>{
+        let addedItem = this.state.Carts.find(item=> item._id === id)
+        if(addedItem.Quantity===1){
+            if (
+                window.confirm(
+                    `Do you want to remove this product "${addedItem.Product_Name}" permanently?`,
+                )
+            ) {
+                api.Remove_itemById(id)
+                window.location.reload()
+            }
+            
+        }        
+        
+        else{
+        
+        addedItem.Quantity -= 1
+        let newTotal = addedItem.Total_price - addedItem.Product_Price
+        addedItem.Total_price=newTotal
+             api.updateCart(id,addedItem).then(res => {
+                    window.location.reload()
+                    
+                })
+            }
+            }
 
+    Remove_item = (id) => {
         if (
             window.confirm(
-                `Do tou want to delete the Item ${id} permanently?`,
+                `Do you want to remove this product "${id}" permanently?`,
             )
         ) {
             api.Remove_itemById(id)
@@ -69,7 +97,7 @@ class Cart1 extends Component {
                          Name:{item.Product_Name}<br></br>
                          Product Price:{item.Product_Price}<br></br>
                          Product Discription:{item.Product_Discription}<br></br>
-                         Quantity:{item.Quantity} <Button className="Cart_btn" onClick={this.sub} >-</Button> <Button className="Cart_btn" onClick={this.add}>+</Button><br></br>
+                         Quantity:{item.Quantity} <Button className="Cart_btn" onClick={this.sub.bind(this, item._id,item.Quantity)} >-</Button> <Button className="Cart_btn" onClick={this.add.bind(this, item._id,item.Quantity)}>+</Button><br></br>
                          {this.state.Quantitys}
                          Total price:{item.Total_price}<br></br>
                          <Button className="Buy_btn" color="primary" >Buy now</Button>

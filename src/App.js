@@ -48,7 +48,7 @@ function App() {
             <Route exact path="/Oneplus" component={Oneplus}></Route>
             <Route exact path="/Honor" component={Honor}></Route>
             <Route exact path="/Cart1" component={Cart1}></Route>
-            {/* <Route exact path="/form" component={Cart}></Route> */}
+            <Route exact path="/add" component={Addproduct}></Route>
 
           </Switch>
         </Router>
