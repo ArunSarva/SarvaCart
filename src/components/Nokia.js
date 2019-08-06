@@ -146,7 +146,19 @@ render() {
 
                         <div className="card-content discription">
                         <p className="card-title"><b>Nokia 1</b></p>
-                            <p>This is a mobile1 with 4gb RAM 64Gb ROM Black in colour</p>
+                            <p>
+                                <b>Product details</b>
+                            <ul>
+                                <li>16MP+5MP rear camera | 16MP front facing camera</li>
+                                <li>Memory Storage and SIM: 6GB RAM | 64GB internal memory | Expandable to 400 GB |Dual SIM dual-standby (4G+4G)
+                                </li>
+                                <li>Android v8 Oreo operating system with Qualcomm Snapdragon SD 636 quad core processor
+                                </li>
+                                <li>3060mAH lithium-ion battery</li>
+                                <li>Box includes: Charger and Data cable</li>
+                            </ul>
+                                
+</p>
                             <p><b>Price: 14,000$</b></p>
                         </div>
                  {/* </div> */}

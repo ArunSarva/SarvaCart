@@ -27,10 +27,14 @@ h1{
     margin-left:45%; 
 }
 .discription{
-    margin-left: 30%;
-    margin-top: 10%;
+    margin-left: 35%;
+    /* margin-top: 10%; */
 }
 .card-image{
     margin-left:5% ;
     margin-bottom: 15%;
+}
+.modal-dialog {
+    max-width: 790px;
+    margin: 1.75rem auto;
 }
