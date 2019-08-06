@@ -6,6 +6,7 @@ import {Button } from 'reactstrap';
 import Navbar1 from './Navbar1';
 import product from './Product';
 import Product_Navbar from './Product_Navbar';
+import Footer from './Footer';
 
 
 class Cart1 extends Component {
@@ -55,9 +56,10 @@ class Cart1 extends Component {
             }
 
     Remove_item = (id) => {
+        let addedItem = this.state.Carts.find(item=> item._id === id)
         if (
             window.confirm(
-                `Do you want to remove this product "${id}" permanently?`,
+                `Do you want to remove this product "${addedItem.Product_Name}" permanently?`,
             )
         ) {
             api.Remove_itemById(id)
@@ -97,8 +99,7 @@ class Cart1 extends Component {
                          Name:{item.Product_Name}<br></br>
                          Product Price:{item.Product_Price}<br></br>
                          Product Discription:{item.Product_Discription}<br></br>
-                         Quantity:{item.Quantity} <Button className="Cart_btn" onClick={this.sub.bind(this, item._id,item.Quantity)} >-</Button> <Button className="Cart_btn" onClick={this.add.bind(this, item._id,item.Quantity)}>+</Button><br></br>
-                         {this.state.Quantitys}
+                         Quantity: <Button className="Cart_btn" onClick={this.sub.bind(this, item._id,item.Quantity)} >-</Button>{item.Quantity} <Button className="Cart_btn" onClick={this.add.bind(this, item._id,item.Quantity)}>+</Button><br></br>
                          Total price:{item.Total_price}<br></br>
                          <Button className="Buy_btn" color="primary" >Buy now</Button>
                          <Button color="secondary" onClick={this.Remove_item.bind(this, item._id)} >Remove item</Button>
@@ -108,6 +109,7 @@ class Cart1 extends Component {
                  )
 
 )}
+            <Footer/>
             </div>
            
         )

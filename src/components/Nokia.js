@@ -140,7 +140,7 @@ render() {
             <ModalBody>
             {/* <div className="card"> */}
                         <div className="card-image ">
-                        <img className="Products" src={require('../Image/Mobiles/Nokia/nokia1.jpg')} />
+                        <img className="Product" src={require('../Image/Mobiles/Nokia/nokia1.jpg')} />
                             {/* <span className="card-title"><b>Nokia 1</b></span> */}
                         </div>
 
@@ -168,7 +168,7 @@ render() {
             <ModalHeader toggle={this.mobile2.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
             <div className="card-image ">
-                <img className="Products" src={require('../Image/Mobiles/Nokia/nokia2.jpg')} />
+                <img className="Product" src={require('../Image/Mobiles/Nokia/nokia2.jpg')} />
                     {/* <span className="card-title"><b>Nokia 1</b></span> */}
                 </div>
 
@@ -192,7 +192,7 @@ render() {
             <ModalHeader toggle={this.mobile3.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
             <div className="card-image ">
-                <img className="Products" src={require('../Image/Mobiles/Nokia/nokia3.jpg')} />
+                <img className="Product" src={require('../Image/Mobiles/Nokia/nokia3.jpg')} />
                     {/* <span className="card-title"><b>Nokia 1</b></span> */}
                 </div>
 
@@ -219,7 +219,7 @@ render() {
             <ModalHeader toggle={this.mobile4.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
             <div className="card-image ">
-                <img className="Products" src={require('../Image/Mobiles/Nokia/nokia4.jpg')} />
+                <img className="Product" src={require('../Image/Mobiles/Nokia/nokia4.jpg')} />
                     {/* <span className="card-title"><b>Nokia 1</b></span> */}
                 </div>
 
@@ -243,7 +243,7 @@ render() {
             <ModalHeader toggle={this.mobile5.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
             <div className="card-image ">
-                <img className="Products" src={require('../Image/Mobiles/Nokia/nokia5.jpg')} />
+                <img className="Product" src={require('../Image/Mobiles/Nokia/nokia5.jpg')} />
                     {/* <span className="card-title"><b>Nokia 1</b></span> */}
                 </div>
 
@@ -266,7 +266,7 @@ render() {
             <Modal isOpen={this.state.mobile6Open}>
             <ModalHeader toggle={this.mobile6.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
-            <img className="Products" src={require('../Image/mobile3.jpg')} />
+            <img className="Product" src={require('../Image/mobile3.jpg')} />
             </ModalBody>
             <ModalFooter>
                 <Button color="primary">Add to Cart</Button>

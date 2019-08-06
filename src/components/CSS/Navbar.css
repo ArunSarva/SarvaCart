@@ -7,8 +7,8 @@
     width: 15%;
 }
 .brand{
-    width:70%;
-    height: 1%;
+    width:63%;
+    /* height: 1%; */
 }
 /* .Nav_signup{
     padding-left: 250px;
@@ -16,9 +16,9 @@
 } */
 .Cart{
     height: 55px;
-    width: 55px;
+    width: 50px;
     position: absolute;
-    top: 20%;
+    top: 10%;
 }
 .search{
    margin-left: -200%;
@@ -28,9 +28,9 @@
     margin-right: 20%;
 }
 .search_btn{
-    left: 68%;
+    left: 61%;
     position: absolute;    
-    top: 26%;
+    top: 24%;
     height: 50%;
     width: 40px;
     border: none;

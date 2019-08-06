@@ -23,6 +23,7 @@ class Addproduct extends Component {
 			// 	modalIsOpen: true
 			//   }
 			Addproduct = async () => {
+				debugger
 			const { Product_Brand,Product_Name,Product_Price,Product_Discription } = this.state
 			const payload = { Product_Brand,Product_Name,Product_Price,Product_Discription }
 			debugger;
@@ -54,8 +55,11 @@ class Addproduct extends Component {
 					
 				
 				if(a==0){
-					await api.Addproduct(payload).then(res => {
-				// window.alert()
+					 api.Addproduct(payload).then(res => {
+						window.confirm(
+							`Do you want to remove this product "${this.state.Product_Name}" permanently?`,
+						)
+						window.location.reload()
 				
 							this.setState({
                                 Product_Brand:'',
@@ -63,12 +67,8 @@ class Addproduct extends Component {
                                 Product_Price:'',
                                 Product_Discription:''
 				})
-				// browserHistory.push("/home");
+				
 			})
-
-			// .catch(res =>
-			// 	// {browserHistory.push("/");}
-			// )
 
 			}
 			}

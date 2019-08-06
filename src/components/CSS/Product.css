@@ -4,6 +4,11 @@ body
 align-items: center;
 justify-content: center;
 }
+.Product{
+    width: 25%;
+    height:20%;
+    float: left;
+}
 .Product_size
 {
     height: 250px;
@@ -27,4 +32,5 @@ h1{
 }
 .card-image{
     margin-left:5% ;
+    margin-bottom: 15%;
 }

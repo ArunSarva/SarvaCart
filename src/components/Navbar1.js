@@ -17,9 +17,9 @@ class Navbar1 extends Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
           <Nav >
-            <Nav.Link href="./Signup">SignUp</Nav.Link>
-            <Nav.Link href="./">Login</Nav.Link>
-            <Nav.Link className="Nav_signup" href="/Cart1">cart<img className="Cart"  src={require('../Image/cart.png')} alt="Card image"  /></Nav.Link>
+            <Nav.Link href="./Signup"><b>SignUp</b></Nav.Link>
+            <Nav.Link href="./"><b>Login</b></Nav.Link>
+            <Nav.Link className="Nav_signup" href="/Cart1"><b>Cart</b><img className="Cart"  src={require('../Image/cart.png')} alt="Card image"  /></Nav.Link>
           </Nav>  
           </Navbar.Collapse>        
         </Navbar>				
