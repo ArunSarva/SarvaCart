@@ -20,6 +20,8 @@ import Oppo from './components/Oppo';
 import Addproduct from './components/Addproduct';
 import Home1 from './components/Home1';
 import Cart1 from './components/Cart1';
+import newProduct from './components/newProduct';
+import Order from './components/Order';
 // import Form from 'react-bootstrap/FormControl';
 // import Form from './components/Form'
 // import Create from './components/Create';
@@ -49,6 +51,8 @@ function App() {
             <Route exact path="/Honor" component={Honor}></Route>
             <Route exact path="/Cart1" component={Cart1}></Route>
             <Route exact path="/add" component={Addproduct}></Route>
+            <Route exact path="/product" component={newProduct}></Route>
+            <Route exact path="/order" component={Order}></Route>
 
           </Switch>
         </Router>

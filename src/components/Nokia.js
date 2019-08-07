@@ -134,8 +134,12 @@ render() {
             <div className="Item_button" onClick={this.mobile1.bind(this)}>
                 
                 <img className="Product_size" src={require('../Image/Mobiles/Nokia/nokia1.jpg')} />
+                {/* <p className="discription">
+									<h6>Price:13,000Rs</h6>
+									Mobile
+								</p> */}
                 </div>
-                <Modal isOpen={this.state.mobile1Open}>
+                <Modal className="modal-dialog1" isOpen={this.state.mobile1Open}>
             <ModalHeader toggle={this.mobile1.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
             {/* <div className="card"> */}
@@ -158,7 +162,7 @@ render() {
                                 <li>Box includes: Charger and Data cable</li>
                             </ul>
                                 
-</p>
+                            </p>
                             <p><b>Price: 14,000$</b></p>
                         </div>
                  {/* </div> */}
@@ -176,7 +180,7 @@ render() {
                 <div onClick={this.mobile2.bind(this)}>
                 <img className="Product_size" src={require('../Image/Mobiles/Nokia/nokia2.jpg')} />
                 </div>
-            <Modal isOpen={this.state.mobile2Open}>
+            <Modal className="modal-dialog1" isOpen={this.state.mobile2Open}>
             <ModalHeader toggle={this.mobile2.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
             <div className="card-image ">
@@ -186,7 +190,19 @@ render() {
 
                 <div className="card-content discription">
                 <p className="card-title"><b>Nokia 2</b></p>
-                    <p>This is a mobile1 with 4gb RAM 64Gb ROM gray in colour</p>
+                <p>
+                     <b>Product details</b>
+                <ul>
+                    <li>8MP Rear Camera</li>
+                    <li>Memory Storage and SIM: 1 GB RAM | 8 GB ROM | Expandable to 400 GB |Dual SIM dual-standby (4G+4G)
+                    </li>
+                    <li>Android v8 Oreo operating system with Qualcomm Snapdragon SD 636 quad core processor
+                    </li>
+                    <li>4000 mAh lithium-ion battery</li>
+                    <li>Box includes: Charger and Data cable</li>
+                </ul>
+                    
+                </p>
                     <p><b>Price: 15,000$</b></p>
             </div>
             </ModalBody>
@@ -200,7 +216,7 @@ render() {
             <div onClick={this.mobile3.bind(this)}>
                 <img className="Product_size" src={require('../Image/Mobiles/Nokia/nokia3.jpg')} />
                 </div>
-            <Modal isOpen={this.state.mobile3Open}>
+            <Modal className="modal-dialog1" isOpen={this.state.mobile3Open}>
             <ModalHeader toggle={this.mobile3.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
             <div className="card-image ">
@@ -210,7 +226,19 @@ render() {
 
                 <div className="card-content discription">
                 <p className="card-title"><b>Nokia 3</b></p>
-                    <p>This is a mobile1 with 4gb RAM 64Gb ROM gray in colour</p>
+                <p>
+                    <b>Product details</b>
+                <ul>
+                    <li>13MP Rear Camera | 5MP front facing camera</li>
+                    <li>Memory Storage and SIM: 3 GB RAM | 32 GB ROM | Expandable to 400 GB |Dual SIM dual-standby (4G+4G)
+                    </li>
+                    <li>Android v8 Oreo operating system with Qualcomm Snapdragon SD 636 quad core processor
+                    </li>
+                    <li>3500 mAh lithium-ion battery</li>
+                    <li>Box includes: Charger and Data cable</li>
+                </ul>
+                    
+                </p>
                     <p><b>Price: 13,500$</b></p>
             </div>
             </ModalBody>
@@ -227,7 +255,7 @@ render() {
             <div onClick={this.mobile4.bind(this)}>
                 <img className="Product_size" src={require('../Image/Mobiles/Nokia/nokia4.jpg')} />
                 </div>
-            <Modal isOpen={this.state.mobile4Open}>
+            <Modal className="modal-dialog1" isOpen={this.state.mobile4Open}>
             <ModalHeader toggle={this.mobile4.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
             <div className="card-image ">
@@ -237,7 +265,19 @@ render() {
 
                 <div className="card-content discription">
                 <p className="card-title"><b>Nokia 2</b></p>
-                    <p>This is a mobile1 with 2gb RAM 64Gb ROM gray in colour</p>
+                <p>
+                    <b>Product details</b>
+                <ul>
+                    <li>13MP Rear Camera | 8MP Front Camera</li>
+                    <li>Memory Storage and SIM: 2 GB RAM | 16 GB ROM | Expandable Upto 128 GB|Dual SIM dual-standby (4G+4G)
+                    </li>
+                    <li>Android v8 Oreo operating system with Qualcomm Snapdragon SD 636 quad core processor
+                    </li>
+                    <li>3000 mAh Battery</li>
+                    <li>Box includes: Charger and Data cable</li>
+                </ul>
+                    
+                </p>
                     <p><b>Price: 15,500$</b></p>
             </div>
             </ModalBody>
@@ -251,7 +291,7 @@ render() {
             <div onClick={this.mobile5.bind(this)}>
                 <img className="Product_size" src={require('../Image/Mobiles/Nokia/nokia5.jpg')} />
                 </div>
-            <Modal isOpen={this.state.mobile5Open}>
+            <Modal className="modal-dialog1" isOpen={this.state.mobile5Open}>
             <ModalHeader toggle={this.mobile5.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
             <div className="card-image ">
@@ -261,7 +301,20 @@ render() {
 
                 <div className="card-content discription">
                 <p className="card-title"><b>Nokia 5</b></p>
-                    <p>This is a mobile1 with 4gb RAM 64Gb ROM gray in colour</p>
+                <p>
+
+                                <b>Product details</b>
+                            <ul>
+                                <li>16MP+5MP rear camera | 16MP front facing camera</li>
+                                <li>Memory Storage and SIM: 6GB RAM | 64GB internal memory | Expandable to 400 GB |Dual SIM dual-standby (4G+4G)
+                                </li>
+                                <li>Android v8 Oreo operating system with Qualcomm Snapdragon SD 636 quad core processor
+                                </li>
+                                <li>3060mAH lithium-ion battery</li>
+                                <li>Box includes: Charger and Data cable</li>
+                            </ul>
+                                
+                            </p>
                     <p><b>Price: 15000$</b></p>
             </div>
             </ModalBody>
@@ -275,7 +328,7 @@ render() {
             <div onClick={this.mobile6.bind(this)}>
                 <img className="Product_size" src={require('../Image/mobile3.jpg')} />
                 </div>
-            <Modal isOpen={this.state.mobile6Open}>
+            <Modal className="modal-dialog1" isOpen={this.state.mobile6Open}>
             <ModalHeader toggle={this.mobile6.bind(this)}>Mobile phone</ModalHeader>
             <ModalBody>
             <img className="Product" src={require('../Image/mobile3.jpg')} />

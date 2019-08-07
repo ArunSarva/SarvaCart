@@ -1,31 +1,53 @@
 import React, { Component } from 'react';
-
+import api from '../Api/Index'
+import './CSS/newProduct.css'
+import Navbar1 from './Navbar1';
+import Product_Navbar from './Product_Navbar';
 class newProduct extends Component {
-    render() {
-        let itemList = this.state.Carts.map(item=>{
-            return(
-                <div className="card" key={item.id}>
-                        <div className="card-image">
-                            {/* <img src={item.img} alt={item.title}/> */}
-                            <span className="card-title">{item.Product_Name}</span>
-                            <span to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></span>
-                        </div>
+    constructor(props) {
+        super(props)
+        this.state = {
+            Products: [],
+        }
+    }
+    componentDidMount = async () => {
+        this.setState({ isLoading: true })
 
+        api.GetProduct().then(Products => {
+            this.setState({
+                Products: Products.data,
+                isLoading: false,
+            })
+
+        })
+    }
+    render() {
+        let itemList = this.state.Products.map(item=>{
+            return(
+                <div className="card1" key={item.id}>  
                         <div className="card-content">
-                            <p>{item.Product_Discription}</p>
-                            <p><b>Price: {item.Product_Price}$</b></p>
+                        <b>Product Name:</b><span className="card-titl">{item.Product_Name}</span>
+                        <br></br>
+                            <p><b>Details:</b>{item.Product_Discription}</p>
+                            <p><b>Price:</b> {item.Product_Price}Rs</p>
                         </div>
                  </div>
-
             )
+            
         })
 
         return(
-            <div className="container">
-                <h3 className="center">Our items</h3>
-                <div className="box">
+        <div>
+            <h3 >Our items</h3>
+            <Navbar1/>
+            <Product_Navbar/>
+            <h3 className="page_head" ><b>Our items</b></h3>        
+            <div className="containe">                
+                <br></br>
+                <div className="box1">
                     {itemList}
                 </div>
+            </div>
             </div>
         )
     }

@@ -1,0 +1,33 @@
+.card1{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    border: solid;
+    margin-top: 5%;
+    padding: 2%;
+    flex-wrap: wrap;
+
+}
+.card .card-image .card-title{
+    color: black;
+    font-weight: 400;
+    
+}
+/* .item-desc{
+    align-self:center;
+} */
+.box1{
+    display: flex;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    
+}
+.containe {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.page_head{
+    margin-top: 2%;
+    margin-left: 42%;
+}
