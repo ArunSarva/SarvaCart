@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import Admin_navBar from './Admin_navBar';
-import { Button } from 'react-bootstrap';
+import './CSS/Admin_home.css'
+import Footer from '../Footer';
 
 class Admin_Home extends Component {
     render() {
         return (
             <div>
                 <Admin_navBar/>
-                <Button color="primary">view order</Button>
-                <Button color="primary">Add item</Button>
+                <div className="admin_home">
+                    
+                </div>
+                <Footer/>
             </div>
         );
     }

@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import ReactTable from 'react-table'
 import api from '../Api/Index'
 import './CSS/Cart.css'
-import {Button } from 'reactstrap';
 import Navbar1 from './Navbar1';
 import product from './Product';
 import Product_Navbar from './Product_Navbar';
 import Footer from './Footer';
+import { Container,Form, Button, Modal, ModalHeader, ModalBody,ModalFooter,Row,Col } from 'reactstrap';
+
+  
 
 
 class Cart1 extends Component {
@@ -16,9 +18,34 @@ class Cart1 extends Component {
             Carts: [],
             columns: [],
             isLoading: false,
-            Quantitys:0
+            Quantitys:0,
+            visible: true,
+            mobile1Open: false,
+            Name:"",
+            Price:'',
+            Quantity:"",
+            Totalprice:''
+
         }
     }
+    close(){
+        debugger
+        this.setState({
+            mobile1Open: ! this.state.mobile1Open
+        });
+    }
+    Buy_now(id) {
+        debugger
+        let addedItem = this.state.Carts.find(item=> item._id === id)
+        this.setState({
+            mobile1Open: ! this.state.mobile1Open,          
+          Name:addedItem.Product_Name,
+          Price:addedItem.Product_Price,
+          Quantity:addedItem.Quantity,
+          Totalprice:addedItem.Total_price,
+          
+        });
+      }
     add=(id) =>{
         let addedItem = this.state.Carts.find(item=> item._id === id)
         addedItem.Quantity += 1
@@ -99,9 +126,9 @@ class Cart1 extends Component {
                          Name:{item.Product_Name}<br></br>
                          Product Price:{item.Product_Price}<br></br>
                          Product Discription:{item.Product_Discription}<br></br>
-                         Quantity: <Button className="Cart_btn" onClick={this.sub.bind(this, item._id,item.Quantity)} >-</Button>{item.Quantity} <Button className="Cart_btn" onClick={this.add.bind(this, item._id,item.Quantity)}>+</Button><br></br>
+                         Quantity: <Button className="Cart_btn" onClick={this.sub.bind(this, item._id)} >-</Button>{item.Quantity} <Button className="Cart_btn" onClick={this.add.bind(this, item._id,item.Quantity)}>+</Button><br></br>
                          Total price:{item.Total_price}<br></br>
-                         <Button className="Buy_btn" color="primary" >Buy now</Button>
+                         <Button className="Buy_btn" color="primary" onClick={this.Buy_now.bind(this, item._id)} >Buy now</Button>
                          <Button color="secondary" onClick={this.Remove_item.bind(this, item._id)} >Remove item</Button>
                          <hr></hr>
                      
@@ -109,6 +136,22 @@ class Cart1 extends Component {
                  )
 
 )}
+
+            <Modal className="modal-dialog1" isOpen={this.state.mobile1Open}>
+            <ModalHeader toggle={this.close.bind(this)}>Mobile phone</ModalHeader>
+            <ModalBody>
+            {/* <img className="Product" src={require('../Image/mobile3.jpg')} /> */}
+            {/* <h3>Brand:{this.state.Product_Brand}</h3> */}
+            Name:{this.state.Name}<br></br>
+            Product Price:{this.state.Price}<br></br>
+            Quantity: {this.state.Quantity} <br></br>
+            Total price:{this.state.Totalprice}<br></br>
+            </ModalBody>
+            <ModalFooter>
+                <Button color="primary">Place an order</Button>
+                <Button color="secondary" onClick={this.Buy_now.bind(this)}>Buy now</Button>
+            </ModalFooter>
+            </Modal>
             <Footer/>
             </div>
            

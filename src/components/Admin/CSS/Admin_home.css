@@ -1,0 +1,12 @@
+.admin_home{
+    background-image: url(../../image/logo.jpg);
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+  }
+
+  .bg
+{
+  background-color:#4cada4;
+  padding: 2%;
+}

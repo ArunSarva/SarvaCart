@@ -11,13 +11,13 @@ import Login from './components/Login';
 import Product_Navbar from './components/Product_Navbar';
 import Product from './components/Product';
 import ItemContainer from './components/ItemContainer';
-import Admin_Home from './components/Admin_Home';
+import Admin_Home from './components/Admin/Admin_Home';
 import Nokia from './components/Nokia';
 import Honor from './components/Honor';
 import Samsung from './components/Samsung';
 import Oneplus from './components/Oneplus';
 import Oppo from './components/Oppo';
-import Addproduct from './components/Addproduct';
+import Addproduct from './components/Admin/Addproduct';
 import Home1 from './components/Home1';
 import Cart1 from './components/Cart1';
 import newProduct from './components/newProduct';
@@ -39,6 +39,7 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/Home" component={Home}></Route>
+            <Route exact path="/AHome" component={Admin_Home}></Route>
             <Route exact path="/" component={Login}></Route>
             <Route exact path="/signup" component={Signup}></Route>
             <Route exact path="/product_navbar" component={Product_Navbar}></Route>

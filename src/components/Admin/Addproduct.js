@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Col, Button,Form } from 'react-bootstrap';
-import api from '../Api/Index'
-import Navbar1 from './Navbar1';
+import api from '../../Api/Index'
+import Navbar1 from '../Navbar1';
+import Footer from '../Footer';
+import Admin_navBar from './Admin_navBar';
+import './CSS/Admin_home.css'
 
 class Addproduct extends Component {
 	constructor(props) {
@@ -96,9 +99,10 @@ class Addproduct extends Component {
 		const { Product_Brand,Product_Name,Product_Price,Product_Discription } = this.state
         return (
             <div>
-                <Navbar1/>
-                <div className="container">
-                  <Form>
+                <Admin_navBar/>
+				<div className="admin_home">
+                <div className="container bg">
+                  <Form className="bg">
                     <Form.Row>
                       <Form.Group as={Col} >
                         <Form.Label>Product Brand</Form.Label>
@@ -128,6 +132,8 @@ class Addproduct extends Component {
 				  <Button variant="primary" onClick={this.Addproduct} type="submit">Upload Product</Button>
 
                 </div>
+				</div>
+				<Footer/>
             </div>
         );
     }

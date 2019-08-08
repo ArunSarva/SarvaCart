@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import api from '../Api/Index'
 import {Button } from 'reactstrap';
-import Navbar1 from './Navbar1';
-import Product_Navbar from './Product_Navbar';
+import Admin_navBar from './Admin/Admin_navBar';
 import Footer from './Footer';
 class Order extends Component {
     constructor(props) {
@@ -40,8 +39,10 @@ class Order extends Component {
         return (
             <div>
                  
-                <Navbar1/>
-                <Product_Navbar/>
+                 <Admin_navBar/>
+                 <div className="admin_home">
+                    
+                
                  {this.state.Order.map((item,index)=>(
                      <div className="Cart_div" key="index">
                          <h3>Brand:{item.Product_Brand}</h3>
@@ -57,6 +58,7 @@ class Order extends Component {
                  )
 
                 )}
+                </div>
             <Footer/>
             </div>
         );
