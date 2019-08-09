@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../Api/Index'
+// import '../App.css'
 import {Button } from 'reactstrap';
 import Admin_navBar from './Admin/Admin_navBar';
 import Footer from './Footer';
@@ -37,10 +38,11 @@ class Order extends Component {
 
     render() {
         return (
-            <div>
+            <div className='orderbody'>
                  
                  <Admin_navBar/>
-                 <div className="admin_home">
+                 <div>
+                 {/* <div className="admin_home"> */}
                     
                 
                  {this.state.Order.map((item,index)=>(
@@ -58,8 +60,12 @@ class Order extends Component {
                  )
 
                 )}
+                {/* </div> */}
                 </div>
-            <Footer/>
+                <div>            <Footer/>
+                </div>
+                
+
             </div>
         );
     }

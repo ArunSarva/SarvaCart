@@ -4,7 +4,7 @@ import './CSS/Footer.css'
 class Footer extends Component {
 	render() {
 		return (
-			<div>
+			<div className="Footer" >
 				<Card className="text-center" bg="dark" variant="light">
 					<Card.Header>
 						<p className="p">

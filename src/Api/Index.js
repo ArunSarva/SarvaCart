@@ -13,6 +13,7 @@ export const Getorder = id => api.get(`/Getorder`)
 export const Deliver = id =>api.delete(`/Deliver/${id}`)
 export const Remove_itemById = id =>api.delete(`/deletecart/${id}`)
 export const getCart = id => api.get(`/Getcart`)
+export const PlaceOrder = payload => api.post(`/Addorder`,payload)
 
 const apis = {
     signup,
@@ -24,7 +25,8 @@ const apis = {
     GetProduct,
     Getorder,
     Deliver,
-    getCart
+    getCart,
+    PlaceOrder
 }
 
 export default apis

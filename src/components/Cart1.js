@@ -6,8 +6,8 @@ import Navbar1 from './Navbar1';
 import product from './Product';
 import Product_Navbar from './Product_Navbar';
 import Footer from './Footer';
-import { Container,Form, Button, Modal, ModalHeader, ModalBody,ModalFooter,Row,Col } from 'reactstrap';
-
+import { Button, Modal, ModalHeader, ModalBody,ModalFooter} from 'reactstrap';
+import { Form } from 'react-bootstrap';
   
 
 
@@ -21,13 +21,61 @@ class Cart1 extends Component {
             Quantitys:0,
             visible: true,
             mobile1Open: false,
-            Name:"",
-            Price:'',
-            Quantity:"",
-            Totalprice:''
+            id:'',
+            Product_Brand:"",
+            Product_Name:"",
+            Product_Price:'',
+            Product_Quantity:"",
+            Product_Totalprice:'',
+            Address:'',
+            Address_message:""
 
         }
     }
+    PlaceOrder = async () => {
+        debugger
+    const {  Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice,Address } = this.state
+    const payload = { Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice,Address }
+    debugger;
+    let a=0;
+        if(!this.state.Address)
+            {
+                a=1;
+                const Address_message = "Address is empty"
+                this.setState({ Address_message })
+            } 
+        if(a==0){
+             window.confirm(
+                `conform order "${this.state.Name}"?`,
+            )
+             api.PlaceOrder(payload).then(res => {
+
+                window.location.reload()
+                 debugger              
+                     this.setState({
+                        Product_Brand:"",
+                        Product_Name:"",
+                        Product_Price:'',
+                        Product_Quantity:"",
+                        Product_Totalprice:'',
+                        Address:'',
+                        Address_message:""
+                    })
+        
+                })
+                debugger
+                api.Remove_itemById(this.state.id)
+                this.setState({
+                    id:""})
+                window.location.reload()
+             }
+        }
+
+    handleChangeInputAddress = async event => {
+        const Address = event.target.value
+        this.setState({ Address })
+}
+
     close(){
         debugger
         this.setState({
@@ -38,11 +86,14 @@ class Cart1 extends Component {
         debugger
         let addedItem = this.state.Carts.find(item=> item._id === id)
         this.setState({
-            mobile1Open: ! this.state.mobile1Open,          
-          Name:addedItem.Product_Name,
-          Price:addedItem.Product_Price,
-          Quantity:addedItem.Quantity,
-          Totalprice:addedItem.Total_price,
+                      
+          id:addedItem._id,
+          Product_Brand:addedItem.Product_Brand,
+          Product_Name:addedItem.Product_Name,
+          Product_Price:addedItem.Product_Price,
+          Product_Quantity:addedItem.Quantity,
+          Product_Totalprice:addedItem.Total_price,
+          mobile1Open: ! this.state.mobile1Open
           
         });
       }
@@ -94,27 +145,20 @@ class Cart1 extends Component {
         }
     }
     componentDidMount = async () => {
+        debugger
         this.setState({ isLoading: true })
 
         await api.getCart().then(Carts => {
             this.setState({
                 Carts: Carts.data,
                 isLoading: false,
-                // Quantitys:Carts.data.Quantity
             })
-            // console.log("hi",Carts.data.Quantity)
-            this.state.Carts.map((item,index)=>(
-                this.setState({
-                    Quantitys:item.Quantity
-                })
-            ))
-            console.log("hi",this.state.Quantitys)
-
         })
     }
 
     render(){
        
+        const { Address } = this.state
         return(
             <div>
                 <Navbar1/>
@@ -142,14 +186,21 @@ class Cart1 extends Component {
             <ModalBody>
             {/* <img className="Product" src={require('../Image/mobile3.jpg')} /> */}
             {/* <h3>Brand:{this.state.Product_Brand}</h3> */}
-            Name:{this.state.Name}<br></br>
-            Product Price:{this.state.Price}<br></br>
-            Quantity: {this.state.Quantity} <br></br>
-            Total price:{this.state.Totalprice}<br></br>
+            Name:{this.state.Product_Name}<br></br>
+            Product Price:{this.state.Product_Price}<br></br>
+            Quantity: {this.state.Product_Quantity} <br></br>
+            Total price:{this.state.Product_Totalprice}<br></br>
+            <Form>
+            <Form.Group controlId="Discription">
+                <Form.Label>Discription</Form.Label>
+                <Form.Control type="text" value= {Address} onChange={this.handleChangeInputAddress} placeholder="Address" />
+                <span>{this.state.Address_message}</span>
+            </Form.Group>
+            </Form>
             </ModalBody>
             <ModalFooter>
-                <Button color="primary">Place an order</Button>
-                <Button color="secondary" onClick={this.Buy_now.bind(this)}>Buy now</Button>
+                <Button color="primary"  onClick={this.PlaceOrder}>Place an order</Button>
+                <Button color="secondary" onClick={this.close.bind(this)}>Back</Button>
             </ModalFooter>
             </Modal>
             <Footer/>

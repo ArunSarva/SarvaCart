@@ -40,3 +40,9 @@
     height: 100%;
     /* width: 50%; */
 }
+.Cart_no
+{position: relative;
+    top: -18px;
+    left: 16px;
+color:red;
+}
