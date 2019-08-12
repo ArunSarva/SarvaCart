@@ -2,14 +2,27 @@ import React, { Component } from 'react';
 import { Nav,Navbar, Form,FormControl,Button } from 'react-bootstrap';
 import './CSS/Navbar.css';
 
+import browserHistory from '../util/browserHistory'
+
 import api from '../Api/Index'
 
 class Navbar1 extends Component {
   constructor(props) {
     super(props)
     this.state = {
-        Carts: []
+        Carts: [],
+        Name:''
       }}
+      handleChangeInputName = async event => {
+        debugger
+        const Name =  event.target.value
+        this.setState({ Name })
+    }
+    Search = async () => {
+      debugger
+      let path=this.state.Name;
+      browserHistory.push(`/${path}`);
+    }
   componentDidMount = async () => {
     // debugger
 
@@ -24,18 +37,19 @@ class Navbar1 extends Component {
 }
 	render() {
     var count=0;
+    const { Name } = this.state
 		return (
 			<div>
-        {this.state.Carts.map(category => {
-                                            
-                                            count=count+1;
-                                        })}
+        {
+          this.state.Carts.map(category => {
+          count=count+1;
+        })}
 				<Navbar className="Nav_bar " bg="primary" variant="dark">
           <Navbar.Brand className="brand" href="./Home"><img className="logo"  src={require('../Image/logo.jpg')} alt="Logo image"  />
        </Navbar.Brand>
-          <Form >
-            <FormControl type="text" placeholder="Search" className=" search" />
-            <Button className="search_btn" onClick={this.Search}><img className="search_icon" src={require('../Image/search.png')} alt="Logo image"  /></Button>
+          <Form onSubmit={this.Search}>
+            <FormControl type="text" value= {Name} onChange={this.handleChangeInputName} placeholder="Search" className=" search" />
+            <Button className="search_btn"  onClick={this.Search}  ><img className="search_icon" src={require('../Image/search.png')} alt="Logo image"  /></Button>
             {/* <input className="search_icon" type="submit" value="" /> */}
           </Form>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

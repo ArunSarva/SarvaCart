@@ -21,15 +21,23 @@ class newProduct extends Component {
     AddCart(id){
         debugger
         let addedItem = this.state.Products.find(item=> item._id === id)
-        this.setState({                      
-          id:addedItem._id,
-          Product_Brand:addedItem.Product_Brand,
-          Product_Name:addedItem.Product_Name,
-          Product_Price:addedItem.Product_Price,
-          Product_Totalprice:addedItem.Total_price,          
-        });
-        const {  Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice,Address } = this.state
-    const payload = { Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice,Address }
+        // this.setState({
+        //   Product_Brand:addedItem.Product_Brand,
+        //   Product_Name:addedItem.Product_Name,
+        //   Product_Price:addedItem.Product_Price,
+        //   Product_Totalprice:addedItem.Total_price,          
+        // });
+        const payload = {
+            Product_Brand:addedItem.Product_Brand,
+            Product_Name:addedItem.Product_Name,
+            Product_Discription:addedItem.Product_Price,
+            Product_Price:addedItem.Product_Price,
+            Quantity:1,
+            Total_price:addedItem.Total_price
+           
+          }
+    //     const {  Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice } = this.state
+    // const payload = { Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice }
         // debugger
         // let payload = this.state.Products.find(item=> item._id === id)
   

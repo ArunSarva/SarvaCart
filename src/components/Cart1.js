@@ -35,7 +35,7 @@ class Cart1 extends Component {
     PlaceOrder = async () => {
         debugger
     const {  Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice,Address } = this.state
-    const payload = { Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice,Address }
+    const payload1 = { Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice,Address }
     debugger;
     let a=0;
         if(!this.state.Address)
@@ -45,12 +45,10 @@ class Cart1 extends Component {
                 this.setState({ Address_message })
             } 
         if(a==0){
-             window.confirm(
-                `conform order "${this.state.Name}"?`,
-            )
-             api.PlaceOrder(payload).then(res => {
+            
+             api.PlaceOrder(payload1).then(res => {
 
-                window.location.reload()
+                // window.location.reload()
                  debugger              
                      this.setState({
                         Product_Brand:"",
@@ -64,9 +62,8 @@ class Cart1 extends Component {
         
                 })
                 debugger
+                let addedItem = this.state.Carts.find(item=> item._id === this.state.id)
                 api.Remove_itemById(this.state.id)
-                this.setState({
-                    id:""})
                 window.location.reload()
              }
         }
@@ -192,7 +189,6 @@ class Cart1 extends Component {
             Total price:{this.state.Product_Totalprice}<br></br>
             <Form>
             <Form.Group controlId="Discription">
-                <Form.Label>Discription</Form.Label>
                 <Form.Control type="text" value= {Address} onChange={this.handleChangeInputAddress} placeholder="Address" />
                 <span>{this.state.Address_message}</span>
             </Form.Group>
