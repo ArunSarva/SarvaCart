@@ -60,7 +60,7 @@ class Addproduct extends Component {
 				if(a==0){
 					 api.Addproduct(payload).then(res => {
 						window.confirm(
-							`Do you want to remove this product "${this.state.Product_Name}" permanently?`,
+							`Do you add this product "${this.state.Product_Name}" ?`,
 						)
 						window.location.reload()
 				

@@ -44,7 +44,7 @@ class Navbar1 extends Component {
           this.state.Carts.map(category => {
           count=count+1;
         })}
-				<Navbar className="Nav_bar " bg="primary" variant="dark">
+				<Navbar className="Nav_bar Navbar" bg="primary" variant="dark">
           <Navbar.Brand className="brand" href="./Home"><img className="logo"  src={require('../Image/logo.jpg')} alt="Logo image"  />
        </Navbar.Brand>
           <Form onSubmit={this.Search}>

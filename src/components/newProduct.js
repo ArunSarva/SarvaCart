@@ -4,6 +4,7 @@ import './CSS/newProduct.css'
 import Navbar1 from './Navbar1';
 import Product_Navbar from './Product_Navbar';
 import { Button} from 'reactstrap';
+import Footer from './Footer';
 
 class newProduct extends Component {
     constructor(props) {
@@ -30,10 +31,10 @@ class newProduct extends Component {
         const payload = {
             Product_Brand:addedItem.Product_Brand,
             Product_Name:addedItem.Product_Name,
-            Product_Discription:addedItem.Product_Price,
+            Product_Discription:addedItem.Product_Discription,
             Product_Price:addedItem.Product_Price,
             Quantity:1,
-            Total_price:addedItem.Total_price
+            Total_price:addedItem.Product_Price
            
           }
     //     const {  Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice } = this.state
@@ -67,8 +68,9 @@ class newProduct extends Component {
                         <div className="card-content">
                         <b>Product Name:</b><span className="card-titl">{item.Product_Name}</span>
                         <br></br>
+                        <br></br>
                             <p><b>Details:</b>{item.Product_Discription}</p>
-                            <p><b>Price:</b> {item.Product_Price}Rs</p>
+                            <p><b>Price:</b> <b>{item.Product_Price}</b>Rs</p>
                             <Button color="primary"  onClick={this.AddCart.bind(this, item._id)}>Add to Cart</Button>
                         </div>
                  </div>
@@ -88,6 +90,7 @@ class newProduct extends Component {
                     
                 </div>
             </div>
+            <Footer/>
             </div>
         )
     }

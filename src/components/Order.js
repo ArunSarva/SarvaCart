@@ -14,6 +14,7 @@ class Order extends Component {
         }
     }
     componentDidMount = async () => {
+        debugger
         this.setState({ isLoading: true })
 
         await api.Getorder().then(Order => {

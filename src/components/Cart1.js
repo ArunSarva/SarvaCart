@@ -25,8 +25,8 @@ class Cart1 extends Component {
             Product_Brand:"",
             Product_Name:"",
             Product_Price:'',
-            Product_Quantity:"",
-            Product_Totalprice:'',
+            Quantity:"",
+            Total_price:'',
             Address:'',
             Address_message:""
 
@@ -34,8 +34,8 @@ class Cart1 extends Component {
     }
     PlaceOrder = async () => {
         debugger
-    const {  Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice,Address } = this.state
-    const payload1 = { Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice,Address }
+    const {  Product_Brand,Product_Name,Product_Price,Quantity,Total_price,Address } = this.state
+    const payload1 = { Product_Brand,Product_Name,Product_Price,Quantity,Total_price,Address }
     debugger;
     let a=0;
         if(!this.state.Address)
@@ -88,8 +88,8 @@ class Cart1 extends Component {
           Product_Brand:addedItem.Product_Brand,
           Product_Name:addedItem.Product_Name,
           Product_Price:addedItem.Product_Price,
-          Product_Quantity:addedItem.Quantity,
-          Product_Totalprice:addedItem.Total_price,
+          Quantity:addedItem.Quantity,
+          Total_price:addedItem.Total_price,
           mobile1Open: ! this.state.mobile1Open
           
         });
@@ -185,8 +185,8 @@ class Cart1 extends Component {
             {/* <h3>Brand:{this.state.Product_Brand}</h3> */}
             Name:{this.state.Product_Name}<br></br>
             Product Price:{this.state.Product_Price}<br></br>
-            Quantity: {this.state.Product_Quantity} <br></br>
-            Total price:{this.state.Product_Totalprice}<br></br>
+            Quantity: {this.state.Quantity} <br></br>
+            Total price:{this.state.Total_price}<br></br>
             <Form>
             <Form.Group controlId="Discription">
                 <Form.Control type="text" value= {Address} onChange={this.handleChangeInputAddress} placeholder="Address" />
