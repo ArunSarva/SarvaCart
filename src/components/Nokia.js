@@ -163,14 +163,14 @@ render() {
                             </ul>
                                 
                             </p>
-                            <p><b>Price: 14,000$</b></p>
+                            <p><b>Price: 14,000Rs</b></p>
                         </div>
                  {/* </div> */}
             
             </ModalBody>
             <ModalFooter>
                 <Button color="primary" onClick={this.AddNokia1}>Add to Cart</Button>
-                <Button color="secondary" onClick={this.mobile1.bind(this)}>Buy now</Button>
+                <Button color="secondary" onClick={this.mobile1.bind(this)}>Back</Button>
             </ModalFooter>
             </Modal>
             </Col>
@@ -203,12 +203,12 @@ render() {
                 </ul>
                     
                 </p>
-                    <p><b>Price: 15,000$</b></p>
+                    <p><b>Price: 15,000Rs</b></p>
             </div>
             </ModalBody>
             <ModalFooter>
                 <Button color="primary" onClick={this.AddNokia2}>Add to Cart</Button>
-                <Button color="secondary" onClick={this.mobile2.bind(this)}>Buy now</Button>
+                <Button color="secondary" onClick={this.mobile2.bind(this)}>Back</Button>
             </ModalFooter>
             </Modal>
             </Col>
@@ -239,12 +239,12 @@ render() {
                 </ul>
                     
                 </p>
-                    <p><b>Price: 13,500$</b></p>
+                    <p><b>Price: 13,500Rs</b></p>
             </div>
             </ModalBody>
             <ModalFooter>
                 <Button color="primary" onClick={this.AddNokia3}>Add to Cart</Button>
-                <Button color="secondary" onClick={this.mobile3.bind(this)}>Buy now</Button>
+                <Button color="secondary" onClick={this.mobile3.bind(this)}>Back</Button>
             </ModalFooter>
             </Modal>
             </Col>
@@ -278,12 +278,12 @@ render() {
                 </ul>
                     
                 </p>
-                    <p><b>Price: 15,500$</b></p>
+                    <p><b>Price: 15,500Rs</b></p>
             </div>
             </ModalBody>
             <ModalFooter>
                 <Button color="primary" onClick={this.AddNokia4}>Add to Cart</Button>
-                <Button color="secondary" onClick={this.mobile4.bind(this)}>Buy now</Button>
+                <Button color="secondary" onClick={this.mobile4.bind(this)}>Back</Button>
             </ModalFooter>
             </Modal>
             </Col>
@@ -315,12 +315,12 @@ render() {
                             </ul>
                                 
                             </p>
-                    <p><b>Price: 15000$</b></p>
+                    <p><b>Price: 15000Rs</b></p>
             </div>
             </ModalBody>
             <ModalFooter>
                 <Button color="primary">Add to Cart</Button>
-                <Button color="secondary" onClick={this.mobile5.bind(this)}>Buy now</Button>
+                <Button color="secondary" onClick={this.mobile5.bind(this)}>Back</Button>
             </ModalFooter>
             </Modal>
             </Col>
@@ -335,7 +335,7 @@ render() {
             </ModalBody>
             <ModalFooter>
                 <Button color="primary">Add to Cart</Button>
-                <Button color="secondary" onClick={this.mobile6.bind(this)}>Buy now</Button>
+                <Button color="secondary" onClick={this.mobile6.bind(this)}>Back</Button>
             </ModalFooter>
             </Modal>
             </Col>

@@ -22,12 +22,6 @@ class newProduct extends Component {
     AddCart(id){
         debugger
         let addedItem = this.state.Products.find(item=> item._id === id)
-        // this.setState({
-        //   Product_Brand:addedItem.Product_Brand,
-        //   Product_Name:addedItem.Product_Name,
-        //   Product_Price:addedItem.Product_Price,
-        //   Product_Totalprice:addedItem.Total_price,          
-        // });
         const payload = {
             Product_Brand:addedItem.Product_Brand,
             Product_Name:addedItem.Product_Name,
@@ -37,14 +31,8 @@ class newProduct extends Component {
             Total_price:addedItem.Product_Price
            
           }
-    //     const {  Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice } = this.state
-    // const payload = { Product_Brand,Product_Name,Product_Price,Product_Quantity,Product_Totalprice }
-        // debugger
-        // let payload = this.state.Products.find(item=> item._id === id)
-  
          api.AddCart(payload).then(res => {
             window.location.reload()
-            // browserHistory.push("/nokia");
         })
     }
 
@@ -69,9 +57,9 @@ class newProduct extends Component {
                         <b>Product Name:</b><span className="card-titl">{item.Product_Name}</span>
                         <br></br>
                         <br></br>
-                            <p><b>Details:</b>{item.Product_Discription}</p>
-                            <p><b>Price:</b> <b>{item.Product_Price}</b>Rs</p>
-                            <Button color="primary"  onClick={this.AddCart.bind(this, item._id)}>Add to Cart</Button>
+                        <p><b>Details:</b>{item.Product_Discription}</p>
+                        <p><b>Price:</b> <b>{item.Product_Price}</b>Rs</p>
+                        <Button color="primary"  onClick={this.AddCart.bind(this, item._id)}>Add to Cart</Button>
                         </div>
                  </div>
             )

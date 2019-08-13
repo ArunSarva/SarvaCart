@@ -103,7 +103,7 @@ class Login extends Component {
 				<Modal isOpen={this.state.modalIsOpen}>
 				<ModalHeader toggle={this.toggleModal.bind(this)}>Login</ModalHeader>
 				<ModalBody>
-				<Form>
+				<Form onSubmit={this.AddUser}>
 					<Form.Group controlId="formBasicEmail">
 						<Form.Label>Email address</Form.Label>
 						<Form.Control type="email" onChange={this.handleChangeInputEmail} value= {email} placeholder="Enter email" />

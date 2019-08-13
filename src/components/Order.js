@@ -50,11 +50,11 @@ class Order extends Component {
                      <div className="Cart_div" key="index">
                          <h3>Brand:{item.Product_Brand}</h3>
                          {/* id:{item._id} */}
-                         Name:{item.Product_Name}<br></br>
-                         Product Price:{item.Product_Price}<br></br>
-                         Quantity: {item.Quantity}<br></br>
-                         Total price:{item.Total_price}<br></br>
-                         Address:{item.Address}<br></br>
+                         <b>Name:</b>{item.Product_Name}<br></br>
+                         <b> Product Price:</b>{item.Product_Price}<br></br>
+                         <b>Quantity:</b> {item.Quantity}<br></br>
+                         <b>Total price:</b>{item.Total_price}<br></br>
+                         <b> Address:</b>{item.Address}<br></br>
                          <Button className="Buy_btn" color="primary" onClick={this.Remove_item.bind(this, item._id)} >Deliver The Product</Button>
                          <hr></hr>
                      
