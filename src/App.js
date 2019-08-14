@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import { Button,Nav,Form,Navbar,FormControl } from 'react-bootstrap';
 // import Register from './components/Register';
 // import Login from './components/Login';
@@ -31,32 +31,32 @@ import Order from './components/Order';
 function App() {
   return (
     <div className="App">
-        <div>
-        
-        </div>
-        {/* <Navbar1/> */}
-        {/* <Product_Navbar/> */}
-        <Router>
-          <Switch>
-            <Route exact path="/Home" component={Home}></Route>
-            <Route exact path="/AHome" component={Admin_Home}></Route>
-            <Route exact path="/" component={Login}></Route>
-            <Route exact path="/signup" component={Signup}></Route>
-            <Route exact path="/product_navbar" component={Product_Navbar}></Route>
-            <Route exact path="/pro" component={Product}></Route>
-            <Route exact path="/item" component={ItemContainer}></Route>
-            <Route exact path="/Oppo" component={Oppo}></Route>
-            <Route exact path="/Samsung" component={Samsung}></Route>
-            <Route exact path="/Nokia" component={Nokia}></Route>
-            <Route exact path="/Oneplus" component={Oneplus}></Route>
-            <Route exact path="/Honor" component={Honor}></Route>
-            <Route exact path="/Cart1" component={Cart1}></Route>
-            <Route exact path="/add" component={Addproduct}></Route>
-            <Route exact path="/product" component={newProduct}></Route>
-            <Route exact path="/order" component={Order}></Route>
+      <div>
 
-          </Switch>
-        </Router>
+      </div>
+      {/* <Navbar1/> */}
+      {/* <Product_Navbar/> */}
+      <Router>
+        <Switch>
+          <Route exact path="/Home" component={Home}></Route>
+          <Route exact path="/AHome" component={Admin_Home}></Route>
+          <Route exact path="/" component={Login}></Route>
+          <Route exact path="/signup" component={Signup}></Route>
+          <Route exact path="/product_navbar" component={Product_Navbar}></Route>
+          <Route exact path="/pro" component={Product}></Route>
+          <Route exact path="/item" component={ItemContainer}></Route>
+          <Route exact path="/Oppo" component={Oppo}></Route>
+          <Route exact path="/Samsung" component={Samsung}></Route>
+          <Route exact path="/Nokia" component={Nokia}></Route>
+          <Route exact path="/Oneplus" component={Oneplus}></Route>
+          <Route exact path="/Honor" component={Honor}></Route>
+          <Route exact path="/Cart1" component={Cart1}></Route>
+          <Route exact path="/add" component={Addproduct}></Route>
+          <Route exact path="/product" component={newProduct}></Route>
+          <Route exact path="/order" component={Order}></Route>
+
+        </Switch>
+      </Router>
     </div>
   );
 }

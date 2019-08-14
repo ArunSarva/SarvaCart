@@ -7,11 +7,11 @@ class Admin_Home extends Component {
     render() {
         return (
             <div>
-                <Admin_navBar/>
+                <Admin_navBar />
                 <div className="admin_home">
-                    
+
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         );
     }
