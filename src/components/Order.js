@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import api from '../Api/Index'
-// import '../App.css'
 import { Button } from 'reactstrap';
 import Admin_navBar from './Admin/Admin_navBar';
 import Footer from './Footer';
@@ -43,13 +42,9 @@ class Order extends Component {
 
 				<Admin_navBar />
 				<div>
-					{/* <div className="admin_home"> */}
-
-
 					{this.state.Order.map((item, index) => (
 						<div className="Cart_div" key="index">
 							<h3>Brand:{item.Product_Brand}</h3>
-							{/* id:{item._id} */}
 							<b>Name:</b>{item.Product_Name}<br></br>
 							<b> Product Price:</b>{item.Product_Price}<br></br>
 							<b>Quantity:</b> {item.Quantity}<br></br>
@@ -62,7 +57,6 @@ class Order extends Component {
 					)
 
 					)}
-					{/* </div> */}
 				</div>
 				<div>            <Footer />
 				</div>

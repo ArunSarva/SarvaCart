@@ -4,7 +4,6 @@ import './CSS/Product_Navbar.css'
 class Product_Navbar extends Component {
 	render() {
 		return (
-			// <div class="navbar">
 			<Navbar collapseOnSelect expand="lg" bg="light" variant="light">
 				<Navbar.Brand href="./Home">SarvaCart</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -30,27 +29,9 @@ class Product_Navbar extends Component {
 							<NavDropdown.Divider />
 							<NavDropdown.Item href="/product">Washing Machine</NavDropdown.Item>
 						</NavDropdown>
-						{/* <NavDropdown  className="Nav_DropDown" title="Clothing" id="collasible-nav-dropdown">
-						<NavDropdown className="Nav_DropDown" title="Men" href="#action/3.1">
-							<NavDropdown.Item>
-							<Dropdown.Item eventKey="2">watch</Dropdown.Item>
-								<Dropdown.Item eventKey="1">Clothing</Dropdown.Item>
-								<Dropdown.Item eventKey="2">Top wear</Dropdown.Item>
-							</NavDropdown.Item>
-						</NavDropdown>
-						<NavDropdown className="Nav_DropDown" title="Women" href="#action/3.1">
-							<NavDropdown.Item>
-							<Dropdown.Item eventKey="2">Watch</Dropdown.Item>
-								<Dropdown.Item eventKey="1">Clothing</Dropdown.Item>
-								<Dropdown.Item eventKey="2">Top wear</Dropdown.Item>
-							</NavDropdown.Item>
-						</NavDropdown>
-					</NavDropdown>				 */}
-
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
-			// </div>
 		);
 	}
 }

@@ -65,8 +65,7 @@ class Signup extends Component {
 			this.setState({ Name_message })
 		}
 		if (a == 0) {
-			await api.signup(payload).then(res => {
-				// window.alert(`Movie inserted successfully`)			
+			await api.signup(payload).then(res => {	
 				this.setState({
 					Name: '',
 					Email: '',
@@ -105,7 +104,6 @@ class Signup extends Component {
 
 		return (
 			<Container>
-				{/* <Button color="primary Sign_up" onClick={this.toggleModal.bind(this)}>Signup</Button> */}
 				<Modal isOpen={this.state.modalIsOpen}>
 					<ModalHeader toggle={this.toggleModal.bind(this)}>Register</ModalHeader>
 					<ModalBody>
@@ -128,8 +126,6 @@ class Signup extends Component {
 								<Form.Control type="password" onChange={this.handleChangeInputPassword} value={Password} placeholder="Password" />
 								<span>{this.state.Password_message}</span>
 							</Form.Group>
-							{/* <Button color="primary Signup_btn">Signup</Button> */}
-							{/* <Button color="secondary" onClick={this.toggleModal.bind(this)}>Cancel</Button>							 */}
 						</Form>
 					</ModalBody>
 					<ModalFooter>

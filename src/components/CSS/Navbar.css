@@ -8,12 +8,7 @@
 }
 .brand{
     width:63%;
-    /* height: 1%; */
 }
-/* .Nav_signup{
-    padding-left: 250px;
-    padding-right: 100px;
-} */
 .Cart{
     height: 55px;
     width: 50px;
@@ -38,7 +33,6 @@
 }
 .search_icon{
     height: 100%;
-    /* width: 50%; */
 }
 .Cart_no
 {position: relative;

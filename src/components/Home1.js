@@ -21,7 +21,6 @@ class Home1 extends Component {
                             <img src={item.img} alt={item.title} />
                             <span className="card-title">{item.title}</span>
                             <Button onClick={() => { this.handleClick(item.id) }}>Add Movie</Button>
-                            {/* <span to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></span> */}
                         </div>
 
                         <div className="card-content">

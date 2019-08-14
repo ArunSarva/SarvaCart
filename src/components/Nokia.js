@@ -134,18 +134,12 @@ class Nokia extends Component {
 							<div className="Item_button" onClick={this.mobile1.bind(this)}>
 
 								<img className="Product_size" src={require('../Image/Mobiles/Nokia/nokia1.jpg')} />
-								{/* <p className="discription">
-									<h6>Price:13,000Rs</h6>
-									Mobile
-								</p> */}
 							</div>
 							<Modal className="modal-dialog1" isOpen={this.state.mobile1Open}>
 								<ModalHeader toggle={this.mobile1.bind(this)}>Mobile phone</ModalHeader>
 								<ModalBody>
-									{/* <div className="card"> */}
 									<div className="card-image ">
 										<img className="Product" src={require('../Image/Mobiles/Nokia/nokia1.jpg')} />
-										{/* <span className="card-title"><b>Nokia 1</b></span> */}
 									</div>
 
 									<div className="card-content discription">
@@ -165,7 +159,6 @@ class Nokia extends Component {
 										</p>
 										<p><b>Price: 14,000Rs</b></p>
 									</div>
-									{/* </div> */}
 
 								</ModalBody>
 								<ModalFooter>
@@ -185,7 +178,6 @@ class Nokia extends Component {
 								<ModalBody>
 									<div className="card-image ">
 										<img className="Product" src={require('../Image/Mobiles/Nokia/nokia2.jpg')} />
-										{/* <span className="card-title"><b>Nokia 1</b></span> */}
 									</div>
 
 									<div className="card-content discription">
@@ -221,7 +213,6 @@ class Nokia extends Component {
 								<ModalBody>
 									<div className="card-image ">
 										<img className="Product" src={require('../Image/Mobiles/Nokia/nokia3.jpg')} />
-										{/* <span className="card-title"><b>Nokia 1</b></span> */}
 									</div>
 
 									<div className="card-content discription">
@@ -260,7 +251,6 @@ class Nokia extends Component {
 								<ModalBody>
 									<div className="card-image ">
 										<img className="Product" src={require('../Image/Mobiles/Nokia/nokia4.jpg')} />
-										{/* <span className="card-title"><b>Nokia 1</b></span> */}
 									</div>
 
 									<div className="card-content discription">
@@ -296,7 +286,6 @@ class Nokia extends Component {
 								<ModalBody>
 									<div className="card-image ">
 										<img className="Product" src={require('../Image/Mobiles/Nokia/nokia5.jpg')} />
-										{/* <span className="card-title"><b>Nokia 1</b></span> */}
 									</div>
 
 									<div className="card-content discription">

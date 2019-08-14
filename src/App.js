@@ -1,13 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import { Button,Nav,Form,Navbar,FormControl } from 'react-bootstrap';
-// import Register from './components/Register';
-// import Login from './components/Login';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Home from './components/Home';
 import Navbar1 from './components/Navbar1';
 import Signup from './components/Signup';
 import Login from './components/Login';
-// import modal from './components/modal';
 import Product_Navbar from './components/Product_Navbar';
 import Product from './components/Product';
 import ItemContainer from './components/ItemContainer';
@@ -18,28 +14,29 @@ import Samsung from './components/Samsung';
 import Oneplus from './components/Oneplus';
 import Oppo from './components/Oppo';
 import Addproduct from './components/Admin/Addproduct';
-import Home1 from './components/Home1';
 import Cart1 from './components/Cart1';
 import newProduct from './components/newProduct';
 import Order from './components/Order';
-// import Form from 'react-bootstrap/FormControl';
-// import Form from './components/Form'
-// import Create from './components/Create';
-// import browserHistory from "../util/browserHistory"
 
-
+const PrivateRoute = ({ component: IncomingComponent, ...rest }) => (
+  <Route
+    {...rest}
+    render={props => (
+      (sessionStorage.getItem('authentication')) ? (<IncomingComponent {...props} />) : (
+        <Redirect to={{ pathname: '/', state: { from: props.location }, }} />)
+    )}
+  />
+);
 function App() {
   return (
     <div className="App">
       <div>
 
       </div>
-      {/* <Navbar1/> */}
-      {/* <Product_Navbar/> */}
       <Router>
         <Switch>
           <Route exact path="/Home" component={Home}></Route>
-          <Route exact path="/AHome" component={Admin_Home}></Route>
+          <PrivateRoute exact path="/AHome" component={Admin_Home}></PrivateRoute>
           <Route exact path="/" component={Login}></Route>
           <Route exact path="/signup" component={Signup}></Route>
           <Route exact path="/product_navbar" component={Product_Navbar}></Route>
@@ -51,10 +48,9 @@ function App() {
           <Route exact path="/Oneplus" component={Oneplus}></Route>
           <Route exact path="/Honor" component={Honor}></Route>
           <Route exact path="/Cart1" component={Cart1}></Route>
-          <Route exact path="/add" component={Addproduct}></Route>
+          <PrivateRoute exact path="/add" component={Addproduct}></PrivateRoute>
           <Route exact path="/product" component={newProduct}></Route>
-          <Route exact path="/order" component={Order}></Route>
-
+          <PrivateRoute exact path="/order" component={Order}></PrivateRoute>
         </Switch>
       </Router>
     </div>

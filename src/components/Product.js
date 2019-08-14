@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Col,Row} from 'react-bootstrap';
 import { Container, Button, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col } from 'reactstrap';
 import './CSS/Product.css';
 import Product_Navbar from './Product_Navbar';

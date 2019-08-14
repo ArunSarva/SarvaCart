@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Zoom } from 'react-slideshow-image';
 import { Carousel } from 'react-bootstrap';
 import './CSS/slider.css'
 

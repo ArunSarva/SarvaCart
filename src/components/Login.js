@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { connect} from "react-redux";
 import './CSS/Login.css';
 import { Form } from 'react-bootstrap';
 import api from '../Api/Index';
@@ -21,10 +20,6 @@ class Login extends Component {
 			Password_message: ''
 		}
 	}
-	// state = {
-	// 	visible: true,
-	// 	modalIsOpen: true
-	//   }
 	AddUser = async () => {
 		const { Email, Password } = this.state
 		const payload = { Email, Password }
@@ -59,7 +54,6 @@ class Login extends Component {
 
 		if (a == 0) {
 			await api.Login(payload).then(res => {
-				// window.alert()
 
 				this.setState({
 					Email: '',
@@ -73,6 +67,15 @@ class Login extends Component {
 
 		}
 	}
+	handleSignin=async()=>{
+		debugger;
+		const { Email,Password} = this.state;
+		const payload = { Email,Password }
+		const signinRes = await api.Login(payload)
+		sessionStorage.setItem('authentication', signinRes.data.token)
+		sessionStorage.setItem('userEmail', signinRes.data.email)
+		browserHistory.push("/home");
+	  }
 
 	handleChangeInputPassword = async event => {
 		const Password = event.target.value
@@ -93,8 +96,6 @@ class Login extends Component {
 
 		return (
 			<Container>
-
-				{/* <Button color="primary" onClick={this.toggleModal.bind(this)}>Login</Button> */}
 				<Modal isOpen={this.state.modalIsOpen}>
 					<ModalHeader toggle={this.toggleModal.bind(this)}>Login</ModalHeader>
 					<ModalBody>
@@ -116,7 +117,7 @@ class Login extends Component {
 						</Form>
 					</ModalBody>
 					<ModalFooter>
-						<Button color="primary" onClick={this.AddUser} >Login</Button>
+						<Button color="primary" onClick={this.handleSignin} >Login</Button>
 						<Button color="secondary" onClick={this.toggleModal.bind(this)}>Cancel</Button>
 					</ModalFooter>
 				</Modal>

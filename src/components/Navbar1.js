@@ -25,7 +25,6 @@ class Navbar1 extends Component {
     browserHistory.push(`/${path}`);
   }
   componentDidMount = async () => {
-    // debugger
 
     this.setState({ isLoading: true })
 
@@ -51,7 +50,6 @@ class Navbar1 extends Component {
           <Form onSubmit={this.Search}>
             <FormControl type="text" value={Name} onChange={this.handleChangeInputName} placeholder="Search" className=" search" />
             <Button className="search_btn" onClick={this.Search}  ><img className="search_icon" src={require('../Image/search.png')} alt="Logo image" /></Button>
-            {/* <input className="search_icon" type="submit" value="" /> */}
           </Form>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

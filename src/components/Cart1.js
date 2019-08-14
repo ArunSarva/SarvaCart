@@ -53,8 +53,6 @@ class Cart1 extends Component {
         if (a == 0) {
 
             api.PlaceOrder(payload1).then(res => {
-
-                // window.location.reload()
                 debugger
                 this.setState({
                     Product_Brand: "",
@@ -173,7 +171,6 @@ class Cart1 extends Component {
                 {this.state.Carts.map((item, index) => (
                     <div className="Cart_div" key="index">
                         <h3>Brand:{item.Product_Brand}</h3>
-                        {/* id:{item._id} */}
                         Name:{item.Product_Name}<br></br>
                         Product Price:{item.Product_Price}<br></br>
                         Product Discription:{item.Product_Discription}<br></br>
@@ -191,8 +188,6 @@ class Cart1 extends Component {
                 <Modal className="modal-dialog1" isOpen={this.state.mobile1Open}>
                     <ModalHeader toggle={this.close.bind(this)}>Mobile phone</ModalHeader>
                     <ModalBody>
-                        {/* <img className="Product" src={require('../Image/mobile3.jpg')} /> */}
-                        {/* <h3>Brand:{this.state.Product_Brand}</h3> */}
                         Name:{this.state.Product_Name}<br></br>
                         Product Price:{this.state.Product_Price}<br></br>
                         Quantity: {this.state.Quantity} <br></br>
